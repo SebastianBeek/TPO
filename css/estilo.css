@@ -5,7 +5,15 @@
     cursor: url("/img/patita_cursor20x20.png"), auto;
     font-family: "Fira Sans Condensed", sans-serif;
 }
+body {
+    margin-top: 80px;
+    position: relative;
+    padding-bottom: 210px;
+    min-height: 100vh; /* No tocar, sirve para anclar el footer*/
+    }
 
+
+/*CSS DEL HEADER*/
 .header {
     background-color: rgb(248, 228, 17);
     height: 80px;
@@ -20,7 +28,7 @@
     height: 80px;
     animation: animacionlogo 2s linear 1;
 }
-
+/*Animaciones del logo*/
 @keyframes animacionlogo {
   0% {transform: rotate(0);}
   50% {transform: rotate(360deg);}
@@ -33,14 +41,17 @@
     height: 80px;
     position: fixed;
 }
-
+/*barra de menu*/
 .nav {
     display: flex;
     justify-content: space-between;
     max-width: 1200px; /*avaliable breakpoints , 576 768 1200 */
     margin: 0 auto; /*para que quede centrado en el navegador*/
 }
-
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
 .nav-menu {
     display: flex;
     margin-right: 20px;
@@ -64,11 +75,41 @@
     background-color: rgb(202, 162, 239);
     transition: 0.5s;
 }
-.nav-link {
+
+/*menu desplegable para smartphone*/
+.nav-toggle {
     color: black;
-    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0px 20px;
+    line-height: 60px;
+    display: none;
 }
-/*h1 ppal*/
+/* FIN DEL CSS DEL HEADER*/
+
+/*PAGINA PRINCIPAL*/
+.main_ppal {
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    overflow-x: hidden;
+}
+/*presentacion foto portada*/
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*letras en movimiento */
 .h1_ppal {
     animation-name: desplazar;
     animation-duration: 14s;
@@ -84,37 +125,7 @@
   0% {transform: translateX(100%);}
   100% {transform: translateX(-100%);}
 }
-/*Fin h1*/
-
-body {
-    margin-top: 80px;
-    position: relative;
-    padding-bottom: 210px;
-    min-height: 100vh; /* No tocar, sirve para anclar el footer*/
-    }
-
-/*presentacion foto portada*/
-.carousel {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/*Pagina Principal*/
-.main_ppal {
-    overflow-y: auto;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 20px;
-    padding: 30px;
-    overflow-x: hidden;
-}
+/*Fin de letras en mov.*/
 
 .card {
     border: 1px solid #ccc;
@@ -142,12 +153,10 @@ body {
     font-weight: bold;
     text-align: right;
 }
+/*fIN DE LA PAG PRINCIPAL*/
 
-/* fin de la pag ppal*/
-
-/*Footer*/
+/*FOOTER*/
 footer {
-    font-size: 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,12 +171,13 @@ footer {
     left: 0;
     right: 0;
     padding-top: 30px;
-}
 
+}
 .footer-texto {
     font-size: 14px;
     font-style: italic;
-    line-height: 40px;
+    line-height: 45px;
+    padding-right: 20px;
 }
 .copyright {
     background-color: rgb(176, 92, 169);
@@ -221,16 +231,6 @@ footer {
     font-size: 1.7rem;
 }
 
-.nav-toggle {
-    color: black;
-    background: none;
-    border: none;
-    font-size: 30px;
-    padding: 0px 20px;
-    line-height: 60px;
-    display: none;
-}
-
 /*Boton de ir arriba*/
 #button-up {
     width: 30px;
@@ -252,36 +252,26 @@ footer {
     transform: scale(1.1);
     border-color: rgba(0, 0, 0, 0.1);
 }
+/*FIN DEL FOOTER*/
 
-@media (max-width: 768px) {  /*MODO SMARTPHONE*/
+
+
+/*QUERY MODO SMARTPHONE*/
+@media (max-width: 768px) {  
 
 .header {
-    background-color: rgb(248, 228, 17);
     height: 60px;
-    position: fixed; /*para que quede fija la barra de nav*/
-    width: 100%;
-    top: 0;
-    left: 0;
     flex-wrap: wrap;
 }
 
 .logo {
     padding: 0px 20px;
     height: 58px;
-    animation: animacionlogo 2s linear 1;
-}
-
-@keyframes animacionlogo {
-    0% {transform: rotate(0);}
-    50% {transform: rotate(360deg);}
-    80% {transform: rotate(360deg);}
-    100% {transform: rotate(0);}
 }
 
 .logo2 {
     padding: 10px 0 10px 0px;
     height: 60px;
-    position: fixed;
     left: 35%; /* centrado horizontalmente */
     transform: translateX(-50%);
 }
@@ -295,9 +285,7 @@ footer {
 }
 .nav-menu {
     flex-direction: column;
-    margin-right: 20px;
     align-items: center;
-    list-style: none; /*quita los puntos del listado*/
     background-color: rgb(176, 92, 169);
     position: fixed;
     left: 0;
@@ -341,70 +329,29 @@ body {
 }
 
 footer {
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    align-items: center;
-    background-color: rgb(202, 162, 239);
-    width: 100%;
-    height: 180px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-top: 25px;
+    height: 160px;
+    padding-top: 0px;
+
 }
 
 .footer-texto {
-    font-size: 14px;
-    font-style: italic;
-}
-
-.contenedor-redes-sociales {
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px;
-}
-
-.icono-redes {
-    position: relative;
-    font-size: 0px;
-    width: 40px;
-    height: 40px;
-    margin: 10px;
-    border-radius: 50%;
-    transition: all 0.5s;
+max-height: 80px;
+font-size: 13px;
+line-height: 60px;
 }
 
 /*Boton de ir arriba*/
 #button-up {
-    width: 30px;
-    height: 30px;
-    background: rgb(146, 87, 158);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 50%;
-    font-size: 20px;
-    position: fixed;
     bottom: 39px;
     right: 32px;
-    transition: all 0.3s ease;
-    transform: scale(0);
+    
 }
 
-#button-up:hover {
-    transform: scale(1.1);
-    border-color: rgba(0, 0, 0, 0.1);
 }
-}
-@media (max-width: 576px) {/*MODO Mobile*/
+/*FIN DEL QUERY MODO SMARTPHONE*/
+
+/*QUERY MODO MOBILE*/
+@media (max-width: 576px) {
 .main_ppal {
     grid-template-columns: 1fr;
     font-size: 12px;
@@ -418,10 +365,6 @@ aside {
     width: 100%;
 }
 
-.aside-section {
-    margin-top: 0px;
-}
-
 .card_text_mov {
     margin-bottom: 0;
 }
@@ -432,7 +375,23 @@ aside {
 .services {
     display: grid; /* Convierte en grilla */
     gap: 20px;
+    
+}
+.icono-redes {
+    margin: 10px;
+    
+}
+
+footer {
+    
+    height: 160px;
     padding-top: 0px;
 }
 
+.footer-texto {
+    max-height: 100px;
+    font-size: 12px;
+    line-height: 40px;
+    }
 }
+/*FIN DEL QUERY MODO MOBILE*/
