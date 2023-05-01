@@ -12,16 +12,22 @@
     <!-- Enlace al css -->
     <link rel="stylesheet" href="/css/estilo.css">
     <!-- Fuente de animaciones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Fuente de texto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-qvJotNKDdg4Z9gAaDTNv+4WQIwSkS/71PzNR+L/4I/SSbdCJZzl9XZ0m0ULkmNPbvTm83s3wq0yFcL61I0tovg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
     <!-- Enlace al JavaScript-->
-    <script defer src="/js/index.js"></script> 
+    <script defer src="/js/index.js"></script>
     <title>Drago&Arya</title>
 
 </head>
 
-<body>
+<body id="ir_arriba"><!--Ancla-->
+
     <header class="header">
         <nav class="nav">
             <!-- Logo -->
@@ -33,21 +39,25 @@
             <button class="nav-toggle animate__bounceIn fa-solid fa-bone"></button>
             <!-- Menu principal -->
             <ul class="nav-menu nav-menu_visible">
-                <li class="nav-menu-item animate__bounceIn "><a href="/index.html" class="nav-menu-link nav-link nav-menu-link_active"><b>INICIO</b></a></li>
-                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/productos.html" class="nav-menu-link nav-link"><b>PRODUCTOS</b></a></li>
-                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/nosotros.html" class="nav-menu-link nav-link"><b>NOSOTROS</b></a></li>
-                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/contacto.html" class="nav-menu-link nav-link"><b>CONTACTO</b></a></li>
+                <li class="nav-menu-item animate__bounceIn "><a href="/index.html"
+                        class="nav-menu-link nav-link"><b>INICIO</b></a></li>
+                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/productos.html"
+                        class="nav-menu-link nav-link nav-menu-link_active"><b>PRODUCTOS</b></a></li>
+                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/nosotros.html"
+                        class="nav-menu-link nav-link"><b>NOSOTROS</b></a></li>
+                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/contacto.html"
+                        class="nav-menu-link nav-link"><b>CONTACTO</b></a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div> </div>  
+        <div class=""> </div>
         <section id="hero">
             <h1>Bienvenido a nuestra tienda de productos para perros</h1>
             <p>En nuestra tienda encontrarás todo lo que necesitas para tu perro, desde sogas hasta snacks y accesorios.
             </p>
-            
-            <a href="#productos" class="cta-button">Ver productos</a>
+
+            <a href="/paginas/productos.html" class="cta-button">Ver productos</a>
         </section>
 
         <i class="fa-sharp fa-light fa-up"></i>
@@ -58,25 +68,30 @@
     <footer class="footer">
         <!-- Frase icónica -->
         <div class="footer-texto">
-            <p>''Mis perros han sido la razón por la que he despertado todos los días de mi vida con una sonrisa en mi cara''<br>Jennifer Skiff</p> 
+            <p>"Incluso el caniche más pequeño tiene un corazón de león, listo para hacer cualquier cosa para defender a
+                su amo."<br>Louis Sabin</p>
         </div>
         <!--Links a redes sociales-->
         <div class="contenedor-redes-sociales">
-            <div class="icono-redes"><a href="https://www.instagram.com/dragoyarya/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
-            <div class="icono-redes"><a href="https://www.tiktok.com/@dragoyarya?_t=8aQEFiuZ51C&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a></div>
-            <div class="icono-redes"><a href="https://www.youtube.com/channel/UCn-8075B8vf6SY_CrtjL9cg" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
-            <div class="icono-redes"><a href="https://api.whatsapp.com/message/QZOHX466X4XYB1?autoload=1&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+            <div class="icono-redes"><a href="https://www.instagram.com/dragoyarya/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a></div>
+            <div class="icono-redes"><a href="https://www.tiktok.com/@dragoyarya?_t=8aQEFiuZ51C&_r=1" target="_blank"><i
+                        class="fa-brands fa-tiktok"></i></a></div>
+            <div class="icono-redes"><a href="https://www.youtube.com/channel/UCn-8075B8vf6SY_CrtjL9cg"
+                    target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
+            <div class="icono-redes"><a href="https://api.whatsapp.com/message/QZOHX466X4XYB1?autoload=1&app_absent=0"
+                    target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
         </div>
         <!--Boton de ir hacia arriba-->
         <div id="button-up">
-            <i class="fa-solid fa-angles-up"></i>        
+            <i class="fa-solid fa-angles-up"></i>
         </div>
         <!--Encabezado inferior-->
         <div class="copyright">
             <p>Copyright 2023. All rights reserved. CodoaCodo. Comisión 23016. Grupo 5. </p>
-        </div>  
+        </div>
     </footer>
-    
-</body>     
+
+</body>
 
 </html>
