@@ -1,82 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
-    <!-- Fuentes de iconos Font-Awesome -->
-    <script src="https://kit.fontawesome.com/ba8bc2892d.js" crossorigin="anonymous"></script>
-    <!-- Enlace al css -->
-    <link rel="stylesheet" href="/css/estilo.css">
-    <!-- Fuente de animaciones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> 
-    <!-- Fuente de texto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">    
-    <!-- Enlace al JavaScript-->
-    <script defer src="/js/index.js"></script> 
-    <title>Drago&Arya</title>
-
-</head>
-
-<body>
-    <header class="header">
-        <nav class="nav">
-            <!-- Logo -->
-            <div class="nav-link">
-                <img class="logo" src="/img/logo_circular_prueba.png" alt="logo">
-                <img class="logo2 animate__animated animate__backInLeft" src="/img/logo_nombre.png" alt="nombre">
-            </div>
-            <!-- Boton del menu desplegable para smartphone -->
-            <button class="nav-toggle animate__bounceIn fa-solid fa-bone"></button>
-            <!-- Menu principal -->
-            <ul class="nav-menu nav-menu_visible">
-                <li class="nav-menu-item animate__bounceIn "><a href="/index.html" class="nav-menu-link nav-link nav-menu-link_active"><b>INICIO</b></a></li>
-                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/productos.html" class="nav-menu-link nav-link"><b>PRODUCTOS</b></a></li>
-                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/nosotros.html" class="nav-menu-link nav-link"><b>NOSOTROS</b></a></li>
-                <li class="nav-menu-item animate__bounceIn"><a href="/paginas/contacto.html" class="nav-menu-link nav-link"><b>CONTACTO</b></a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div> </div>  
-        <section id="hero">
-            <h1>Bienvenido a nuestra tienda de productos para perros</h1>
-            <p>En nuestra tienda encontrarás todo lo que necesitas para tu perro, desde sogas hasta snacks y accesorios.
-            </p>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+        <!-- Fuentes de iconos Font-Awesome -->
+        <script src="https://kit.fontawesome.com/ba8bc2892d.js" crossorigin="anonymous"></script>
+        <!-- Enlace al css -->
+        <link rel="stylesheet" href="/css/estilo.css">
+        <!-- Fuente de animaciones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> 
+        <!-- Fuente de texto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">    
+        <!-- Enlace al JavaScript-->
+        <script defer src="/js/index.js"></script> 
+        <title>Drago&Arya</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <!-- Logo -->
+                <div class="nav-link">
+                    <img class="logo" src="/img/logo_circular_prueba.png" alt="logo">
+                    <img class="logo2 animate__animated animate__backInLeft" src="/img/logo_nombre.png" alt="nombre">
+                </div>
+                <!-- Boton del menu desplegable para smartphone -->
+                <button class="nav-toggle animate__bounceIn fa-solid fa-bone"></button>
+                <!-- Menu principal -->
+                <ul class="nav-menu nav-menu_visible">
+                    <li class="nav-menu-item animate__bounceIn "><a href="/index.html" class="nav-menu-link nav-link"><b>INICIO</b></a></li>
+                    <li class="nav-menu-item animate__bounceIn"><a href="/paginas/productos.html" class="nav-menu-link nav-link  nav-menu-link_active"><b>PRODUCTOS</b></a></li>
+                    <li class="nav-menu-item animate__bounceIn"><a href="/paginas/nosotros.html" class="nav-menu-link nav-link"><b>NOSOTROS</b></a></li>
+                    <li class="nav-menu-item animate__bounceIn"><a href="/paginas/contacto.html" class="nav-menu-link nav-link"><b>CONTACTO</b></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
             
-            <a href="#productos" class="cta-button">Ver productos</a>
-        </section>
+            
+            
+            <!-- planificar de como mostrar los productos por categoria sin tener que usar otra pagina, usando grid o flexbox,
+                desde la pagina principal pueden venir usuarios redireccionados para ver el catalogo -->
 
-        <i class="fa-sharp fa-light fa-up"></i>
-        <p>probando desde mi repsitorio clonado_ Gabo</p>
-        <!-- <img src="img/portada1.png" alt="portada">-->
-    </main>
 
-    <footer class="footer">
-        <!-- Frase icónica -->
-        <div class="footer-texto">
-            <p>''Mis perros han sido la razón por la que he despertado todos los días de mi vida con una sonrisa en mi cara''<br>Jennifer Skiff</p> 
-        </div>
-        <!--Links a redes sociales-->
-        <div class="contenedor-redes-sociales">
-            <div class="icono-redes"><a href="https://www.instagram.com/dragoyarya/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
-            <div class="icono-redes"><a href="https://www.tiktok.com/@dragoyarya?_t=8aQEFiuZ51C&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a></div>
-            <div class="icono-redes"><a href="https://www.youtube.com/channel/UCn-8075B8vf6SY_CrtjL9cg" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
-            <div class="icono-redes"><a href="https://api.whatsapp.com/message/QZOHX466X4XYB1?autoload=1&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
-        </div>
-        <!--Boton de ir hacia arriba-->
-        <div id="button-up">
-            <i class="fa-solid fa-angles-up"></i>        
-        </div>
-        <!--Encabezado inferior-->
-        <div class="copyright">
-            <p>Copyright 2023. All rights reserved. CodoaCodo. Comisión 23016. Grupo 5. </p>
-        </div>  
-    </footer>
-    
-</body>     
 
+
+        </main>
+        <footer class="footer">
+            <!-- Frase icónica -->
+            <div class="footer-texto">
+                <p>"Incluso el caniche más pequeño tiene un corazón de león, listo para hacer cualquier cosa para defender a su amo." - Louis Sabin</p> 
+            </div>
+            <!--Links a redes sociales-->
+            <div class="contenedor-redes-sociales">
+                <div class="icono-redes"><a href="https://www.instagram.com/dragoyarya/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="icono-redes"><a href="https://www.tiktok.com/@dragoyarya?_t=8aQEFiuZ51C&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a></div>
+                <div class="icono-redes"><a href="https://www.youtube.com/channel/UCn-8075B8vf6SY_CrtjL9cg" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
+                <div class="icono-redes"><a href="https://api.whatsapp.com/message/QZOHX466X4XYB1?autoload=1&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+            </div>
+            <!--Boton de ir hacia arriba-->
+            <div id="button-up">
+                <i class="fa-solid fa-angles-up"></i>        
+            </div>
+            <!--Encabezado inferior-->
+            <div class="copyright">
+                <p>Copyright 2023. All rights reserved. CodoaCodo. Comisión 23016. Grupo 5. </p>
+            </div>  
+        </footer>
+    </body>     
 </html>
