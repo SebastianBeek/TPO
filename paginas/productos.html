@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Drago&Arya</title>
-
+    
 </head>
 
 <body id="ir_arriba"><!--Ancla-->
@@ -31,18 +31,75 @@
         </nav>
     </header>
     <main>
-        <div class="" > </div> 
-        <section id="hero">
-            <h1>Bienvenido a nuestra tienda de productos para perros</h1>
-            <p>En nuestra tienda encontrarás todo lo que necesitas para tu perro, desde sogas hasta snacks y accesorios.
-            </p>
-            
-            <a href="#productos" class="cta-button">Ver productos</a>
-        </section>
+        <div class="store-products">
+            <div class="categories">
+                <a href="#" class="category_item" category="combos">Combos</a>
+                <a href="#" class="category_item" category="dispensadores">Dispensadores</a>
+                <a href="#" class="category_item" category="gatos">Gatos</a>
+                <a href="#" class="category_item" category="lametones">Lametonas</a>
+                <a href="#" class="category_item" category="mordedores">Mordedores</a>
+                <a href="#" class="category_item" category="olfativas">Olfativas</a>
+                <a href="#" class="category_item" category="paseo">Paseo</a>
+                <a href="#" class="category_item" category="sogas">Sogas</a>
+            </div>
 
-        <i class="fa-sharp fa-light fa-up"></i>
-        <p>probando desde mi repsitorio clonado_ Gabo</p>
-        <!-- <img src="img/portada1.png" alt="portada">-->
+            <section class="products-list">
+                <div class="product-item" category="combos">
+                    <img src="/img/Combos/combo_plaza.png" alt="">
+                    <a href="#">Combo Plaza</a>
+                </div>
+                <div class="product-item" category="combos">
+                    <img src="/img/Combos/combo_mordida_poderosa.png" alt="">
+                    <a href="#">Combo Mordida</a>
+                </div>
+                <div class="product-item" category="combos">
+                    <img src="/img/Combos/combo_portatil.png" alt="">
+                    <a href="#">Combo Portatil</a>
+                </div>
+                <div class="product-item" category="combos">
+                    <img src="/img/Combos/combo10x30.png" alt="">
+                    <a href="#">Combo Snacks</a>
+                </div>
+
+                <div class="slider product-item" category="dispensadores">
+                    <div class=" item"> 
+                        <img id="1" src="/img//Dispensadores/aro1.png" alt="" class="img">
+                        <img id="2" src="/img/Dispensadores/aro2.png" alt="" class="img">
+                        <img id="3" src="/img/Dispensadores/aro3.png" alt="" class="img">
+                        
+                    </div>
+
+                    <ul class="footer-slider">
+                        <a href="#">Dispensador Aro</a>
+                    <div class="points">
+                        <i class=" point active fa-solid fa-paw"></i>
+                        <i class=" point fa-solid fa-paw"></i>
+                        <i class="point fa-solid fa-paw"></i>
+                    </div>
+                    </ul>
+                </div>
+                <div class="slider product-item" category="dispensadores">
+                    <div class=" item"> 
+                        <img id="1" src="/img//Dispensadores/konglock1.png" alt="" class="img">
+                        <img id="2" src="/img/Dispensadores/konglock2.png" alt="" class="img">
+                        <img id="3" src="/img/Dispensadores/konglock3.png" alt="" class="img">
+                        
+                    </div>
+
+                    <ul class="footer-slider">
+                        <a href="#">Dispensador Bolas</a>
+                    <div class="points">
+                        <i class=" point active fa-solid fa-paw"></i>
+                        <i class=" point fa-solid fa-paw"></i>
+                        <i class="point fa-solid fa-paw"></i>
+                    </div>
+                    </ul>
+                </div>
+                </div>
+
+            </section>
+        </div>
+
     </main>
     <footer class="footer">
         <div class="contenedor-redes-sociales">
@@ -62,5 +119,5 @@
     </footer>
     
 </body>     
-
+<script src="./slider.js"></script>
 </html>
