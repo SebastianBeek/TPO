@@ -37,14 +37,76 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            
-            
-            
-            <!-- planificar de como mostrar los productos por categoria sin tener que usar otra pagina, usando grid o flexbox,
-                desde la pagina principal pueden venir usuarios redireccionados para ver el catalogo -->
+        <main class="main_productos">
+            <div class="store-products">
+                <div class="categories">
+                    <a href="#" class="category_item" category="combos" id="combos">Combos</a>
+                    <a href="#" class="category_item" category="dispensadores" id="dispensadores">Dispensadores</a>
+                    <a href="#" class="category_item" category="gatos" id="gatos">Gatos</a>
+                    <a href="#" class="category_item" category="lametones" id="lametonas">Lametonas</a>
+                    <a href="#" class="category_item" category="mordedores" id="mordedores">Mordedores</a>
+                    <a href="#" class="category_item" category="olfativas" id="olfativas">Olfativas</a>
+                    <a href="#" class="category_item" category="paseo" id="paseo">Paseo</a>
+                    <a href="#" class="category_item" category="sogas" id="sogas">Sogas</a>
+                </div>
+    
+                <section class="products-list">
+                    <div class="product-item" category="combos">
+                        <img src="/img/Combos/combo_plaza.png" alt="">
+                        <a href="#">Combo Plaza</a>
+                    </div>
+                    <div class="product-item" category="combos">
+                        <img src="/img/Combos/combo_mordida_poderosa.png" alt="">
+                        <a href="#">Combo Mordida</a>
+                    </div>
+                    <div class="product-item" category="combos">
+                        <img src="/img/Combos/combo_portatil.png" alt="">
+                        <a href="#">Combo Portatil</a>
+                    </div>
+                    <div class="product-item" category="combos">
+                        <img src="/img/Combos/combo10x30.png" alt="">
+                        <a href="#">Combo Snacks</a>
+                    </div>
+    
+                    <div class="slider product-item" category="dispensadores">
+                        <div class=" item"> 
+                            <img id="1" src="/img//Dispensadores/aro1.png" alt="" class="img">
+                            <img id="2" src="/img/Dispensadores/aro2.png" alt="" class="img">
+                            <img id="3" src="/img/Dispensadores/aro3.png" alt="" class="img">
+                        </div>
+    
+                        <ul class="footer-slider">
+                            <a href="#">Dispensador Aro</a>
+                        <div class="points">
+                            <i class=" point active fa-solid fa-paw"></i>
+                            <i class=" point fa-solid fa-paw"></i>
+                            <i class="point fa-solid fa-paw"></i>
+                        </div>
+                        </ul>
+                    </div>
+                    <div class="slider product-item" category="dispensadores">
+                        <div class=" item"> 
+                            <img id="1" src="/img//Dispensadores/konglock1.png" alt="" class="img">
+                            <img id="2" src="/img/Dispensadores/konglock2.png" alt="" class="img">
+                            <img id="3" src="/img/Dispensadores/konglock3.png" alt="" class="img">
+                            
+                        </div>
+    
+                        <ul class="footer-slider">
+                            <a href="#">Dispensador Bolas</a>
+                            <div class="points">
+                                <i class=" point active fa-solid fa-paw"></i>
+                                <i class=" point fa-solid fa-paw"></i>
+                                <i class="point fa-solid fa-paw"></i>
+                            </div>
+                        </ul>
+                    </div>
 
-
+                </section>  
+            </div>
+    
+               
+            
 
 
         </main>
@@ -69,5 +131,6 @@
                 <p>Copyright 2023. All rights reserved. CodoaCodo. Comisión 23016. Grupo 5. </p>
             </div>  
         </footer>
-    </body>     
+    </body>   
+    
 </html>

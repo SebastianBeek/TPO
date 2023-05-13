@@ -95,16 +95,27 @@ body {
 }
 /* FIN DEL CSS DEL HEADER*/
 
-/*PAGINA PRINCIPAL*/
+/*//////////////////////PAG PRINCIPAL/////////////////////*/
 .main_ppal {
     overflow-y: auto;
-    display: grid;
+    display: flex;
     grid-template-columns: 3fr 1fr;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
     gap: 20px;
     overflow-x: hidden;
 }
+.main-section{
+    flex-grow: 1;
+}
+
+.aside-section{
+    width: 300px;
+    margin-left: 30px;
+}
+
+
+
 /*presentacion foto portada*/
 .carousel {
     display: flex;
@@ -127,8 +138,12 @@ body {
     position: relative;
     z-index: 0;
     white-space: nowrap;
-    font-size: 22px;
+    font-size: 14px;
     width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+    
 }
 @keyframes desplazar {
   0% {transform: translateX(100%);}
@@ -137,30 +152,17 @@ body {
 /*Fin de letras en mov.*/
 
 .card {
-    margin-bottom: 20px;
-    text-align: center;
-
-    
-}
-.card_cat {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: minmax(auto, auto);
-    font-size: 16px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 0px;
     
+    text-align: center;
     
 }
+
 .card img {
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
 
-}
-
-.card_cat img {
-    max-width: 80%;
-    
 }
 
 .card h3 {
@@ -174,30 +176,253 @@ body {
     margin-bottom: 10px;
     text-transform:capitalize;
 }
+.card a {
+    text-decoration: none;
+    cursor: pointer;
+    text-align: right !important; 
+}
 .texto{
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
 
 }
-.texto_grid {
-    text-align: center;
-}
+
 .price {
     font-weight: bold;
     text-align: right;
+    margin-bottom: 10px;
 }
-/*FIN DE LA PAG PRINCIPAL*/
 
-/*PAG CONTACTOS*/
+.categorias_ppal{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    
+}
+
+/*Flip card*/
+.card_cat img {
+    max-width: 100%;
+    
+}
+.card_cat {
+    display: inline-block;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: minmax(auto, auto);
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    perspective: 1000px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+.card_cat .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card_cat .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card_cat .front img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_cat .front h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card_cat .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(248, 228, 17);
+    padding: 30px 15px 30px 15px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card_cat .back .link {
+    border-top: solid 2px black;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.card_cat .back .link a {
+    color: rgb(202, 162, 239);
+    cursor: pointer;
+}
+
+.card_cat .back h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card_cat .back p {
+    letter-spacing: 1px;
+    font-size: 14px;
+} 
+
+.card_cat:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card_cat:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/*//////////////////////FIN DE LA PAG PRINCIPAL/////////////////////*/
 
 
-        /*CSS MERY*/
+/*////////////////////// PAG PRODUCTOS/////////////////////*/
+.main_productos{
+    margin-top: 80px;
+    padding: 30px 50px 0px 30px; /*ARRIBA DERECHA ABAJO y IZQUIERDA*/
+}
+.store-products{
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 2rem;
+}
+
+.categories{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categories .category_item{
+    display: block;
+    width: 90%;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    background: rgb(202, 162,239);
+    border-radius: 35px;
+
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;          /*lo agregue para que cambie a cursor en vez de patita*/
+}
+
+/*products-combos*/
+
+.products-list{
+    width: 100%;
+    grid-column: 2/4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
+.products-list .product-item{
+    width: 40%;
+    margin-left: 3%;
+    margin-bottom: 35px;
+    box-shadow: 0px 0px 6px 0px rgb(0,0,0,0.22);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.products-list .product-item img{
+    width: 100%;
+}
+
+.products-list .product-item a{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    background: rgb(248,228,17);
+    border-radius: 20px;
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/*carrusel*/
+
+ .slider{
+    overflow: hidden;
+    height:fit-content;
+ }
+
+ .slider .item{
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(0%);
+ }
+
+ .slider .img{
+    width: 100%
+ }
+ .slider .points{
+    width: 100%;
+    padding: 1em;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ }
+ .slider .point{
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    cursor: pointer;
+ }
+ .slider .points .active{
+    color: orange;
+ }
+ .footer-slider{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    justify-content: center;
+    align-items:center;
+ }
+
+/*//////////////////////FIN DE LA PAG PRODUCTOS/////////////////////*/
 
 
-
-/*FIN DE LA PAG CONTACTOS*/
-
-/*PAG NOSOTROS*/
+/*//////////////////////PAG NOSOTROS/////////////////////*/
 .cuerpo {
     overflow: hidden;
 }
@@ -317,22 +542,21 @@ body {
     flex-direction: column;
 }
 
-/*FIN DE LA PAG NOSOTROS*/
-
-/*PAG CONTACTOS*/
+/*//////////////////////FIN DE LA PAG NOSOTROS/////////////////////*/
 
 
-        /*CSS SEBAS*/
+/*//////////////////////PAG CONTACTOS/////////////////////*/
 
+.main_contacto{
+    margin-top: 80px;
+    padding: 30px 50px 0px 30px; /*ARRIBA DERECHA ABAJO y IZQUIERDA*/
+}
 
-
-/*FIN DE LA PAG CONTACTOS*/
-
-
-
+    /*CSS SEBAS*/
 
 
 
+/*//////////////////////FIN DE LA PAG CONTACTOS/////////////////////*/
 
 
 /*FOOTER*/
@@ -380,7 +604,7 @@ footer {
     position: relative;
     font-size: 0px;
     width: 40px;
-    height: 40px;
+    height: 42px;
     margin: 20px;
     border-radius: 50%;
     transition: all 0.5s;
@@ -507,7 +731,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.flip-card-back{
+    font-size: 3vw;
+}
 footer {
     height: 160px;
     padding-top: 0px;
@@ -537,7 +763,7 @@ line-height: 60px;
     font-size: 12px;
 }
 .h1_ppal {
-    font-size: 16px;
+    font-size: 12px;
     width: 210%;
     margin: 0;
 }
