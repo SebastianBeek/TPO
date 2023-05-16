@@ -1,34 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/stores_otAJ8OqcQtrKQI3DPRtm.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/ba8bc2892d.js" crossorigin="anonymous"></script>
-    <title>Drago y Arya</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <img src="img/stores_otAJ8OqcQtrKQI3DPRtm.png" alt="">
-            <button><i class="fa-solid fa-bars"></i></button>
-            <ul>    
-                <li><a href="inicio.html"></a> Inicio</li>
-                <li><a href="productos.html"></a> Productos</li>
-                <li><a href="nosotros.html"></a> Nosotros</li>
-                <li><a href="contacto.html"></a> Contacto</li>
-            </ul>     
-        </nav>
-    </header>
-    <main></main>
-    <footer>
-        <div>
-           <a href="https://www.instagram.com/dragoyarya/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-           <a href="https://www.tiktok.com/@dragoyarya?_t=8aQEFiuZ51C&_r=1"><i class="fa-brands fa-tiktok"></i></a>
-           <a href="https://www.youtube.com/channel/UCn-8075B8vf6SY_CrtjL9cg"><i class="fa-brands fa-youtube"></i></a> 
-        </div>
-        <p>Copyright 2023 Realizado por grupo 5</p>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+        <!-- Fuentes de iconos Font-Awesome -->
+        <script src="https://kit.fontawesome.com/ba8bc2892d.js" crossorigin="anonymous"></script>
+        <!-- Enlace al css -->
+        <link rel="stylesheet" href="/css/estilo.css">
+        <!-- Fuente de animaciones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> 
+        <!-- Fuente de texto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">    
+        <!-- Enlace al JavaScript-->
+        <script defer src="/js/index.js"></script> 
+        <title>Drago&Arya</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <!-- Logo -->
+                <div class="nav-link">
+                    <img class="logo" src="/img/logo_circular_prueba.png" alt="logo">
+                    <img class="logo2 animate__animated animate__backInLeft" src="/img/logo_nombre.png" alt="nombre">
+                </div>
+                <!-- Boton del menu desplegable para smartphone -->
+                <button class="nav-toggle animate__bounceIn fa-solid fa-bone"></button>
+                <!-- Menu principal -->
+                <ul class="nav-menu nav-menu_visible">
+                    <li class="nav-menu-item animate__bounceIn "><a href="/index.html" class="nav-menu-link nav-link"><b>INICIO</b></a></li>
+                    <li class="nav-menu-item animate__bounceIn"><a href="/paginas/productos.html" class="nav-menu-link nav-link  nav-menu-link_active"><b>PRODUCTOS</b></a></li>
+                    <li class="nav-menu-item animate__bounceIn"><a href="/paginas/nosotros.html" class="nav-menu-link nav-link"><b>NOSOTROS</b></a></li>
+                    <li class="nav-menu-item animate__bounceIn"><a href="/paginas/contacto.html" class="nav-menu-link nav-link"><b>CONTACTO</b></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main_productos">
+            <div class="store-products">
+                <div class="categories">
+                    <a href="#" class="category_item" category="combos" id="combos">Combos</a>
+                    <a href="#" class="category_item" category="dispensadores" id="dispensadores">Dispensadores</a>
+                    <a href="#" class="category_item" category="gatos" id="gatos">Gatos</a>
+                    <a href="#" class="category_item" category="lametones" id="lametonas">Lametonas</a>
+                    <a href="#" class="category_item" category="mordedores" id="mordedores">Mordedores</a>
+                    <a href="#" class="category_item" category="olfativas" id="olfativas">Olfativas</a>
+                    <a href="#" class="category_item" category="paseo" id="paseo">Paseo</a>
+                    <a href="#" class="category_item" category="sogas" id="sogas">Sogas</a>
+                </div>
+    
+                <section class="products-list">
+                    <div class="product-item" category="combos">
+                        <img src="/img/Combos/combo_plaza.png" alt="">
+                        <a href="#">Combo Plaza</a>
+                    </div>
+                    <div class="product-item" category="combos">
+                        <img src="/img/Combos/combo_mordida_poderosa.png" alt="">
+                        <a href="#">Combo Mordida</a>
+                    </div>
+                    <div class="product-item" category="combos">
+                        <img src="/img/Combos/combo_portatil.png" alt="">
+                        <a href="#">Combo Portatil</a>
+                    </div>
+                    <div class="product-item" category="combos">
+                        <img src="/img/Combos/combo10x30.png" alt="">
+                        <a href="#">Combo Snacks</a>
+                    </div>
+    
+                    <div class="slider product-item" category="dispensadores">
+                        <div class=" item"> 
+                            <img id="1" src="/img//Dispensadores/aro1.png" alt="" class="img">
+                            <img id="2" src="/img/Dispensadores/aro2.png" alt="" class="img">
+                            <img id="3" src="/img/Dispensadores/aro3.png" alt="" class="img">
+                        </div>
+    
+                        <ul class="footer-slider">
+                            <a href="#">Dispensador Aro</a>
+                        <div class="points">
+                            <i class=" point active fa-solid fa-paw"></i>
+                            <i class=" point fa-solid fa-paw"></i>
+                            <i class="point fa-solid fa-paw"></i>
+                        </div>
+                        </ul>
+                    </div>
+                    <div class="slider product-item" category="dispensadores">
+                        <div class=" item"> 
+                            <img id="1" src="/img//Dispensadores/konglock1.png" alt="" class="img">
+                            <img id="2" src="/img/Dispensadores/konglock2.png" alt="" class="img">
+                            <img id="3" src="/img/Dispensadores/konglock3.png" alt="" class="img">
+                            
+                        </div>
+    
+                        <ul class="footer-slider">
+                            <a href="#">Dispensador Bolas</a>
+                            <div class="points">
+                                <i class=" point active fa-solid fa-paw"></i>
+                                <i class=" point fa-solid fa-paw"></i>
+                                <i class="point fa-solid fa-paw"></i>
+                            </div>
+                        </ul>
+                    </div>
+
+                </section>  
+            </div>
+    
+               
+            
+
+
+        </main>
+        <footer class="footer">
+            <!-- Frase icónica -->
+            <div class="footer-texto">
+                <p>"Incluso el caniche más pequeño tiene un corazón de león, listo para hacer cualquier cosa para defender a su amo." - Louis Sabin</p> 
+            </div>
+            <!--Links a redes sociales-->
+            <div class="contenedor-redes-sociales">
+                <div class="icono-redes"><a href="https://www.instagram.com/dragoyarya/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="icono-redes"><a href="https://www.tiktok.com/@dragoyarya?_t=8aQEFiuZ51C&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a></div>
+                <div class="icono-redes"><a href="https://www.youtube.com/channel/UCn-8075B8vf6SY_CrtjL9cg" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
+                <div class="icono-redes"><a href="https://api.whatsapp.com/message/QZOHX466X4XYB1?autoload=1&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+            </div>
+            <!--Boton de ir hacia arriba-->
+            <div id="button-up">
+                <i class="fa-solid fa-angles-up"></i>        
+            </div>
+            <!--Encabezado inferior-->
+            <div class="copyright">
+                <p>Copyright 2023. All rights reserved. CodoaCodo. Comisión 23016. Grupo 5. </p>
+            </div>  
+        </footer>
+    </body>   
+    
 </html>
