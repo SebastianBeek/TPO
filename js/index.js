@@ -79,9 +79,5 @@ window.onscroll = function(){
     }
 }
 
-//Presentacion diapositivas de aside
-
-
-
 
 /***************************************************************/
