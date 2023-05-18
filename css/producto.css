@@ -136,8 +136,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
-    
 }
 
 .products-list .product-item{
@@ -148,7 +146,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .products-list .product-item img{
@@ -167,6 +164,14 @@ body {
     text-decoration: none;
     font-size: 20px;
 }
+
+.price,
+.info{
+    color: rgb(101, 65, 134);
+    font-size: 15px;
+    text-align: center;
+}
+
 
 /*carrusel*/
 
