@@ -67,6 +67,7 @@ function scrollUp(){
         window.scrollTo (0, currentScroll - (currentScroll / 5));
     }
 }
+
 buttonUp = document.getElementById("button-up");
 window.onscroll = function(){
 
@@ -78,6 +79,5 @@ window.onscroll = function(){
         buttonUp.style.transform = "scale(0)";
     }
 }
-
 
 /***************************************************************/
