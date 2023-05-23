@@ -176,7 +176,7 @@ body {
     font-size: 18px;
 }
 
-.formulario input {
+.formulario input, .formulario select, .formulario option {
     width: 80%;
     display: inline-block;
     margin-bottom: 2rem;

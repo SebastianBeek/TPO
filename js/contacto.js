@@ -5,8 +5,33 @@ function iniciarMap(){
       zoom: 10,
       center: coord
     });
-    var marker = new google.maps.Marker({
-      position: coord,
-      map: map
+    
+    new google.maps.Marker({
+      position: coord, map,
+      title: "Aca estamos"
     });
+  }
+
+  function validacion(){
+    //valor = document.getElementById("nombre_apellido").value;
+    if( document.myForm.nombre_apellido.value== null || document.myForm.nombre_apellido.value.length == 0 || /^\s+$/.test(document.myForm.nombre_apellido.value) ) {
+      alert("Debe ingresar nombre y apellido");
+      return false;
+    }
+    
+    if (document.myForm.cel.value== "" || isNaN(document.myForm.cel.value)) {
+      alert("Por favor ingrese su telefono");
+      return false;
+    }
+
+    if (document.myForm.provincia.value == "Provincia"){
+      alert("Debe seleccionar una provincia");
+      return false;
+    }
+
+    if (document.myForm.comentario.value == ""){
+      alert("Debe dejar un comentario");
+      return false;
+    }
+    return true;
   }

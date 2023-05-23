@@ -10,20 +10,12 @@
         <script src="https://kit.fontawesome.com/ba8bc2892d.js" crossorigin="anonymous"></script>
         <!-- Enlace al css -->
         <link rel="stylesheet" href="/css/contacto.css">
-<<<<<<< HEAD
-=======
         <!-- Enlace al js -->
-        <script defer src="/js/index.js"></script>
->>>>>>> master
+        <script defer src="/js/contacto.js"></script>
         <!-- Fuente de animaciones -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> 
         <!-- Fuente de texto -->
         <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">    
-<<<<<<< HEAD
-        <!-- Enlace al JavaScript-->
-        <script defer src="/js/contacto.js"></script> 
-=======
->>>>>>> master
         <title>Drago&Arya</title>
     </head>
     <body>
@@ -46,25 +38,6 @@
             </nav>
         </header>
         <main class="main_contacto">
-<<<<<<< HEAD
-
-            <div class="container-form">
-                <div class="welcome">
-                    <div>
-                        <h2>Bienvenido</h2>
-                        <img src="/img/Ppal/news1.png" alt="">
-                    </div>
-                </div>
-                <form class="formulario" id="myForm">
-                    <p class="dejanos">Consultános</p>
-                    
-                    <div>
-                        <input type="text" id="nombre_apellido" name="nombre_apellido" placeholder="Tu nombre y apellido">
-                    </div>
-                    
-                    <div>
-                        <input type="number" id="cel" name="cel" placeholder="Tu numero de celular">
-=======
             <div class="container-form">
                 
                     <div class="video-container">
@@ -84,50 +57,56 @@
                             <p>CABA y a nivel nacional</p>
                         </div>
                     </div>
-                <form class="formulario" id="myForm">
+                <form class="formulario" id="myForm" name="myForm" onsubmit="return validacion()">
                     <p class="consultanos">CONSULTÁNOS</p>
                     <div>
                         <input type="text" id="nombre_apellido" name="nombre_apellido" placeholder="Nombre y Apellido">
                     </div>
                     <div>
                         <input type="number" id="cel" name="cel" placeholder="Número de teléfono">
->>>>>>> master
                     </div>
                     <div>
-                        <input type="text" id="provincia" name="provincia" placeholder="Provincia">
+                        <select id="provincia" name="provincia" >
+                            <option>Provincia</option>
+                            <option value="">Caba</option>
+                            <option value="">Buenos Aires</option> 
+                            <option value="">Catamarca</option>
+                            <option value="">Chaco</option>
+                            <option value="">Chubut</option>
+                            <option value="">Córdoba</option>
+                            <option value="">Corrientes</option>
+                            <option value="">Entre Ríos</option>
+                            <option value="">Formosa</option>
+                            <option value="">Jujuy</option>
+                            <option value="">La Pampa</option>
+                            <option value="">La Rioja</option>
+                            <option value="">Mendoza</option>
+                            <option value="">Misiones</option>
+                            <option value="">Neuquén</option>
+                            <option value="">Río Negro</option>
+                            <option value="">Salta</option>
+                            <option value="">San Juan</option>
+                            <option value="">Santa Cruz</option>
+                            <option value="">Santa Fe</option>
+                            <option value="">Santiago del Estero</option>
+                            <option value="">Tierra del Fuego</option>
+                            <option value="">Tucumán</option>
                     </div>
                     <div>
-<<<<<<< HEAD
-                        <input type="email" id="mail" name="mail" placeholder="Tu correo electronico">
-                    </div>
-                    
-                    <textarea class="comentario" id="comentario" name="comentario" placeholder="Dejanos un comentario"></textarea>
-                    <div class="buttons">
-                        <input type="reset" value="Borrar">
-=======
                         <input type="email" id="mail" name="mail" placeholder="Correo electrónico">
                     </div>
                     <textarea class="comentario" id="comentario" name="comentario" placeholder="Dejanos un comentario"></textarea>
                     <div class="buttons">
-                        <input type="reset" value="Borrar" onclick="document.getElementById('myForm').reset()">
->>>>>>> master
+                        <input type="reset" value="Borrar">
                         <input type="submit" value="Enviar">
                     </div>
                 </form>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> master
         </main>
         <footer class="footer">
             <!-- Frase icónica -->
             <div class="footer-texto">
-<<<<<<< HEAD
-                <p>"¿Sabías que existen cerca de 300 palabras para definir el amor en lenguaje canino?." - Gabriel Zevin</p> 
-=======
                 <p>“El amor por los animales eleva el nivel cultural del pueblo” - Fermín Salvochea</p> 
->>>>>>> master
             </div>
             <!--Links a redes sociales-->
             <div class="contenedor-redes-sociales">
@@ -145,11 +124,7 @@
                 <p>Copyright 2023. All rights reserved. CodoaCodo. Comisión 23016. Grupo 5. </p>
             </div> 
         </footer>
-<<<<<<< HEAD
-    </body>     
-=======
     </body>  
     <script src="/js/contacto.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBWqbWxjFzi1-poRLFkbLQ-kjYtZg0kNs&callback=iniciarMap"></script>
->>>>>>> master
 </html>
