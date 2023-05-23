@@ -10,6 +10,7 @@ body {
     position: relative;
     padding-bottom: 180px;
     min-height: 100vh; /* No tocar, sirve para anclar el footer*/
+    background-color: rgb(202, 162, 239, 0.7);
     }
 
 
@@ -97,19 +98,19 @@ body {
 
 
 /*//////////////////////PAG CONTACTO/////////////////////*/
-.main_contacto{
-    margin-top: 80px;
-    padding: 0px 0px 0px 0px; /*ARRIBA DERECHA ABAJO y IZQUIERDA*/
-    /*height: 100vh;*/
-    height: auto;
+#map {
+	height: 300px;
+	width: 370px;
+}
+.main_contacto {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(img/3.jpg);
-    background-color: rgb(131, 21, 118);
+    min-height: 90vh;
+    /*background-image: url(img/3.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     color: #fff;
 }
 
@@ -118,25 +119,61 @@ body {
     display: flex ;
     flex-wrap: wrap;
     justify-content: space-around;
-    transition:  all .5s ease-out;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .welcome {
-    display: flex;
+    margin-top: 20px;
+    
     align-items: center;
     text-align: center;
+    
+    
+    
+}
+.direccion{
+    margin-top: 20px;
+    text-align: left;
 }
 
+.direccion h4{
+    border-left: 7px solid rgba(235, 104, 255, 0.602);
+    padding-left: 0.3rem;
+    color: rgb(146, 87, 158);
+}
+
+.video-container {
+    height: 600px;
+    width: 370px;
+    overflow: hidden;
+  }
+  
+.video-container video {
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
 .formulario {
     width: 400px;
     padding: 1rem;
     margin: 2rem;
-    background-color: rgb(51, 51, 51, 0.602);
+    background-color: rgba(255, 255, 181, 0.4);
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #000;
 }
 
-.dejanos {
+.consultanos {
     padding: 2rem 0;
+    color: rgb(146, 87, 158);
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 .formulario input {
@@ -145,12 +182,12 @@ body {
     margin-bottom: 2rem;
     background-color: transparent;
     border: none;
-    border-bottom: white thin solid;
+    border-bottom: rgb(0, 0, 0) thin solid;
     text-align: center;
     outline: none;
     padding: .2rem 0;
     font-size: .9rem;
-    color: white;
+    color: black;
 }
 
 textarea { 
@@ -168,6 +205,7 @@ textarea {
     margin-top: 20px;
     margin-left: 10%;
     gap: 10px;
+    
 }
 
 input[type=submit]{
@@ -187,15 +225,8 @@ input[type=reset]{
 
 input[type=submit]:hover, [type=reset]:hover{
     background-color:  rgb(202, 162, 239);
+    cursor: pointer;
 }
-
-
-
-
-
-
-
-
 
 /*//////////////////////FIN DE LA PAG CONTACTO/////////////////////*/
 
@@ -339,7 +370,7 @@ footer {
     width: 100%;
     padding: 0px;
     height: calc(100% - 60px);
-    overflow-y: auto; /*aÃ±adir scroll cuando se minimiza el menu*/
+    overflow-y: auto; /*añadir scroll cuando se minimiza el menu*/
     left: 100%;
     transition: 0.4s;
 }
@@ -362,20 +393,13 @@ footer {
     left: 0;
 }
 body {
+    margin-top: 60px;
     position: relative;
     padding-bottom: 150px;
     font-size: 14px;
 }
 
-.h1_ppal {
-    font-size: 13px;
-    width: 130%;
-    margin: 0;
-    padding: 0;
-}
-
-
-.main_ppal {
+.main_contacto {
     margin-left: 0px;
     margin-right: 0px;
     flex-direction: column;
@@ -406,48 +430,3 @@ line-height: 60px;
 
 }
 
-
-/*QUERY MODO MOBILE*/
-@media (max-width: 576px) {
-.main_ppal {
-    grid-template-columns: 1fr;
-    font-size: 12px;
-}
-.h1_ppal {
-    font-size: 12px;
-    width: 180%;
-    margin: 0;
-}
-
-
-.card_text_mov {
-    margin-bottom: 0;
-}
-
-.new-products,
-.categories,
-.services {
-    display: grid; /* Convierte en grilla */
-    
-}
-.icono-redes {
-    margin: 10px;
-    
-}
-
-.texto {
-    font-size: 12px;
-    }
-
-footer {
-    
-    height: 160px;
-    padding-top: 0px;
-}
-
-.footer-texto {
-    max-height: 100px;
-    font-size: 12px;
-    line-height: 40px;
-    }
-}
