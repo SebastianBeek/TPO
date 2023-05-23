@@ -115,3 +115,12 @@ showImg(currentImg);                                                       // Ej
 
 
 
+//Valido formulario
+function validar() { 
+if (document.getElementById("nombre") == "") {
+  alert("Por favor ingresa tu nombre");
+  console.log ("error falta nombre")
+  document.formulario.nombre.focus();
+  return false;
+  }
+}
