@@ -364,7 +364,7 @@ aside {
     perspective: 1000px;
     position: relative;
     width: 300px;
-    height: 300px;
+    height: 225px;
     margin: 20px;
 }
 
@@ -396,6 +396,7 @@ aside {
     width: 100%;
     height: 45px;
     line-height: 45px;
+    font-size: 18px;
     color: white;
     background: rgba(0, 0, 0, 0.4);
     text-align: center;
@@ -415,7 +416,7 @@ aside {
 }
 
 .card_cat .back .link {
-    border-top: solid 2px black;
+    
     height: 50px;
     line-height: 50px;
     text-decoration: none;
@@ -429,8 +430,9 @@ aside {
 }
 
 .card_cat .back h2 {
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
@@ -1080,7 +1082,9 @@ footer {
     .card_text_mov {
         margin-bottom: 0;
     }
-
+    .card_cat .back p {
+        font-size: 12px;
+    }
     .new-products,
     .categories,
     .services {
