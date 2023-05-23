@@ -119,18 +119,21 @@ body {
     display: flex ;
     flex-wrap: wrap;
     justify-content: space-around;
-    
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .welcome {
     margin-top: 20px;
-    display: flex;
+    
     align-items: center;
     text-align: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 60px;
-    color: light;
+    
+    
+    
 }
 .direccion{
     margin-top: 20px;
