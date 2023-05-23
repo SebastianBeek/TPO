@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Fuentes de iconos Font-Awesome -->
+        <script src="https://kit.fontawesome.com/ba8bc2892d.js" crossorigin="anonymous"></script>
+        <!-- Enlace al css -->
+        
+        
+        <title>Drago&Arya</title>
+        <style>
+          * {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    cursor: url("/img/patita_cursor20x20.png"), auto;
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+body {
+    margin-top: 80px;
+    position: relative;
+    padding-bottom: 180px;
+    min-height: 100vh; /* No tocar, sirve para anclar el footer*/
+    background-color: rgb(246, 114, 230);
+    }
+
+
+/*CSS DEL HEADER*/
+.header {
+    background-color: rgb(248, 228, 17);
+    height: 80px;
+    position: fixed; /*para que quede fija la barra de nav*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/* FIN DEL CSS DEL HEADER*/
+
+
+/*//////////////////////PAG CONTACTO/////////////////////*/
+#map {
+	height: 300px;
+	width: 370px;
+}
+.main_contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    /*background-image: url(img/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    color: #fff;
+}
+
+.container-form {
+    width: 90%;
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.welcome {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+.direccion{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.direccion h3{
+    border-left: 7px solid #4a125498;
+    padding-left: 0.3rem;
+}
+.video-container {
+  height: 300px;
+  width: 370px;
+  overflow: hidden;
+}
+
+.video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.formulario {
+    width: 400px;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: rgb(51, 51, 51, 0.602);
+    text-align: center;
+}
+
+.dejanos {
+    padding: 2rem 0;
+}
+
+.formulario input {
+    width: 80%;
+    display: inline-block;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: white thin solid;
+    text-align: center;
+    outline: none;
+    padding: .2rem 0;
+    font-size: .9rem;
+    color: white;
+}
+
+textarea { 
+    width: 80%; 
+    height: 80px;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 10%;
+    gap: 10px;
+    
+}
+
+input[type=submit]{
+    background-color:rgb(248, 228, 17);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+}
+input[type=reset]{
+    background-color:rgb(248, 228, 17);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type=submit]:hover, [type=reset]:hover{
+    background-color:  rgb(202, 162, 239);
+    cursor: pointer;
+}
+
+/*//////////////////////FIN DE LA PAG CONTACTO/////////////////////*/
+
+
+
+/*FOOTER*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(202, 162, 239);
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 30px;
+
+}
+/*FIN DEL FOOTER*/
+
+
+
+/*QUERY MODO SMARTPHONE*/
+@media (max-width: 768px) {  
+
+.header {
+    height: 60px;
+    flex-wrap: wrap;
+}
+
+
+.nav-menu {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(176, 92, 169);
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding: 0px;
+    height: calc(100% - 60px);
+    overflow-y: auto; /*añadir scroll cuando se minimiza el menu*/
+    left: 100%;
+    transition: 0.4s;
+}
+
+
+body {
+    margin-top: 60px;
+    position: relative;
+    padding-bottom: 150px;
+    font-size: 14px;
+}
+
+.main_contacto {
+    margin-left: 0px;
+    margin-right: 0px;
+    flex-direction: column;
+  }
+
+
+
+footer {
+    height: 160px;
+    padding-top: 0px;
+
+}
+
+}
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            
+        </header>
+        <main class="main_contacto">
+
+            <div class="container-form">
+                <div class="welcome">
+                    <div class="video-container">
+                        <video src="/img/video_promo.mp4" controls>
+                            
+                        </video>
+                    </div>
+                    
+                    
+                    <div>
+                        <div id="map"></div>
+                        <div class="direccion">
+                            <h3>Dirección</h3>
+                            <p>Moreno 1326, CP1091</p>
+                            <p>Ciudad Autónoma de Buenos Aires</p><br>
+                            <h3>Teléfono</h3>
+                            <p>1126200733</p><br>
+                            <h3>Correo</h3>
+                            <p>Ciudad Autónoma de Buenos Aires</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <form class="formulario" id="myForm">
+                    <p class="dejanos">Consultános</p>
+                    
+                    <div>
+                        <input type="text" id="nombre_apellido" name="nombre_apellido" placeholder="Tu nombre y apellido">
+                    </div>
+                    
+                    <div>
+                        <input type="number" id="cel" name="cel" placeholder="Tu numero de celular">
+                    </div>
+                    <div>
+                        <input type="text" id="provincia" name="provincia" placeholder="Provincia">
+                    </div>
+                    <div>
+                        <input type="email" id="mail" name="mail" placeholder="Tu correo electronico">
+                    </div>
+                    
+                    <textarea class="comentario" id="comentario" name="comentario" placeholder="Dejanos un comentario"></textarea>
+                    <div class="buttons">
+                        <input type="reset" value="Borrar" onclick="document.getElementById('myForm').reset()">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <!-- Frase icónica -->
+            <div class="footer-texto">
+                <p>"¿Sabías que existen cerca de 300 palabras para definir el amor en lenguaje canino?." - Gabriel Zevin</p> 
+            </div>
+            <!--Links a redes sociales-->
+            <div class="contenedor-redes-sociales">
+                <div class="icono-redes"><a href="https://www.instagram.com/dragoyarya/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="icono-redes"><a href="https://www.tiktok.com/@dragoyarya?_t=8aQEFiuZ51C&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a></div>
+                <div class="icono-redes"><a href="https://www.youtube.com/channel/UCn-8075B8vf6SY_CrtjL9cg" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
+                <div class="icono-redes"><a href="https://api.whatsapp.com/send?phone=5491126200733" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div>
+            </div>
+            <!--Boton de ir hacia arriba-->
+            <div id="button-up">
+                <i class="fa-solid fa-angles-up"></i>        
+            </div>
+            <!--Encabezado inferior-->
+            <div class="copyright">
+                <p>Copyright 2023. All rights reserved. CodoaCodo. Comisión 23016. Grupo 5. </p>
+            </div> 
+        </footer>
+    </body>     
+</html>
