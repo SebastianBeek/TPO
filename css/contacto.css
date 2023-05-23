@@ -8,8 +8,9 @@
 body {
     margin-top: 80px;
     position: relative;
-    padding-bottom: 210px;
+    padding-bottom: 180px;
     min-height: 100vh; /* No tocar, sirve para anclar el footer*/
+    background-color: rgb(202, 162, 239, 0.7);
     }
 
 
@@ -97,99 +98,135 @@ body {
 
 
 /*//////////////////////PAG CONTACTO/////////////////////*/
-.main_contacto{
-    margin-top: 80px;
-    padding: 30px 50px 0px 30px; /*ARRIBA DERECHA ABAJO y IZQUIERDA*/
+#map {
+	height: 300px;
+	width: 370px;
+}
+.main_contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    /*background-image: url(img/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    color: #fff;
+}
+
+.container-form {
+    width: 90%;
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome {
+    margin-top: 20px;
+    
+    align-items: center;
+    text-align: center;
+    
+    
     
 }
-
-.cajaform{
-    display: grid;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    
-}    
-
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+.direccion{
+    margin-top: 20px;
+    text-align: left;
 }
 
-input[type=number], select, textarea {
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+.direccion h4{
+    border-left: 7px solid rgba(235, 104, 255, 0.602);
+    padding-left: 0.3rem;
+    color: rgb(146, 87, 158);
 }
 
-input[type=email], select, textarea {
+.video-container {
+    height: 600px;
+    width: 370px;
+    overflow: hidden;
+  }
+  
+.video-container video {
+    margin-top: 20px;
+    height: 100%;
     width: 100%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
+    object-fit: cover;
+  }
+  
+.formulario {
+    width: 400px;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: rgba(255, 255, 181, 0.4);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #000;
 }
 
-label{
-    padding: 12px 12px 12px 0;
+.consultanos {
+    padding: 2rem 0;
+    color: rgb(146, 87, 158);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.formulario input {
+    width: 80%;
     display: inline-block;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: rgb(0, 0, 0) thin solid;
+    text-align: center;
+    outline: none;
+    padding: .2rem 0;
+    font-size: .9rem;
+    color: black;
 }
 
-input[type=submit], [type=reset]{
+textarea { 
+    width: 80%; 
+    height: 80px;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 10%;
+    gap: 10px;
+    
+}
+
+input[type=submit]{
     background-color:rgb(248, 228, 17);
     color: black;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
-    float: right;
+}
+input[type=reset]{
+    background-color:rgb(248, 228, 17);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
 }
 
 input[type=submit]:hover, [type=reset]:hover{
     background-color:  rgb(202, 162, 239);
-  }
-
-.comentario{
-    height: 200px;
+    cursor: pointer;
 }
-
-.col25{
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-}
-
-.col75{
-    float: left;
-    width: 75%;
-    margin-top: 6px;   
-}
-
-.fila::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media screen and (max-width: 600px) {
-    .col25, .col75, input[type=submit], input[type=reset] {
-      width: 100%;
-      margin-top: 0;
-      gap: 20px;
-    }
-  }
-
-
-
-
-
-
-
-
 
 /*//////////////////////FIN DE LA PAG CONTACTO/////////////////////*/
 
@@ -356,21 +393,13 @@ footer {
     left: 0;
 }
 body {
-    margin-top: 50px;
+    margin-top: 60px;
     position: relative;
     padding-bottom: 150px;
     font-size: 14px;
 }
 
-.h1_ppal {
-    font-size: 13px;
-    width: 130%;
-    margin: 0;
-    padding: 0;
-}
-
-
-.main_ppal {
+.main_contacto {
     margin-left: 0px;
     margin-right: 0px;
     flex-direction: column;
@@ -401,48 +430,3 @@ line-height: 60px;
 
 }
 
-
-/*QUERY MODO MOBILE*/
-@media (max-width: 576px) {
-.main_ppal {
-    grid-template-columns: 1fr;
-    font-size: 12px;
-}
-.h1_ppal {
-    font-size: 12px;
-    width: 180%;
-    margin: 0;
-}
-
-
-.card_text_mov {
-    margin-bottom: 0;
-}
-
-.new-products,
-.categories,
-.services {
-    display: grid; /* Convierte en grilla */
-    
-}
-.icono-redes {
-    margin: 10px;
-    
-}
-
-.texto {
-    font-size: 12px;
-    }
-
-footer {
-    
-    height: 160px;
-    padding-top: 0px;
-}
-
-.footer-texto {
-    max-height: 100px;
-    font-size: 12px;
-    line-height: 40px;
-    }
-}
