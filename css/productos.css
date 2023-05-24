@@ -454,7 +454,36 @@ footer {
     .texto {
     font-size: 14px;
     }
-    
+
+    /* products */
+
+    .categories .category_item{
+        width: 50%;
+        text-align: center;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* flip-card */
+    .products-list .product-item a{
+        height: 30px;
+        padding-top: 2px;
+    }
+
+    .cardBox {
+        height: 70px;
+    }
+ 
+  .front{
+    font-size: 18px;
+  }
+  .back {
+    font-size: 10px;
+  }
+  .price{
+    font-size: 10px;
+  }
+    /* ------------ */
     footer {
         height: 160px;
         padding-top: 0px;
@@ -508,7 +537,41 @@ footer {
 .texto {
     font-size: 12px;
     }
+/* products */
 
+.categories .category_item{
+    width: 37%;
+    text-align: center;
+    height: 20px;
+    font-size: 11px;
+}
+
+/* flip-card */
+.products-list .product-item a{
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.cardBox {
+    height: 70px;
+}
+
+.front{
+font-size: 12px;
+text-align: center;
+}
+.back {
+font-size: 8px;
+}
+.price{
+font-size: 10px;
+}
+.slider .points{
+    padding-top: 40px;
+    
+ }
+
+/* ---------- */
 footer {
     
     height: 160px;
