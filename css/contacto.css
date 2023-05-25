@@ -30,20 +30,11 @@ body {
 }
 /*Animaciones del logo*/
 @keyframes animacionlogo {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(360deg);
-    }
-    80% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
+    0% { transform: rotate(0); }
+    50% { transform: rotate(360deg); }
+    80% { transform: rotate(360deg); }
+    100% { transform: rotate(0); }
 }
-
 .logo2 {
     padding: 15px 0px 15px 0px;
     height: 80px;
@@ -65,32 +56,27 @@ body {
     margin-right: 20px;
     list-style: none; /*quita los puntos del listado*/
 }
-
 .nav-menu-item {
     font-size: 14px;
     margin: 0 5px;
     line-height: 80px;
     width: max-content; /*para que no me quite palabras si son mas de 2 al achicar*/
 }
-
 .nav-menu-link {
     padding: 8px 12px;
     border-radius: 5px;
 }
-
 .nav-menu-link:hover,
 .nav-menu-link_active {
     background-color: rgb(202, 162, 239);
     transition: 0.5s;
 }
-
 .nav-menu-link-cat:hover,
 .nav-menu-link-cat_active {
     background: none;
     color: rgb(202, 162, 239);
     transition: 0.2s;
 }
-
 /*menu desplegable para smartphone*/
 .nav-toggle {
     color: black;
@@ -106,7 +92,13 @@ body {
 /*//////////////////////PAG CONTACTO/////////////////////*/
 #map {
     height: 300px;
-    width: 370px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #000;
+}
+.mapa{
+    height: 600px;
+    width: 400px;
 }
 .main_contacto {
     display: flex;
@@ -115,7 +107,6 @@ body {
     min-height: 90vh;
     color: #fff;
 }
-
 .container-form {
     width: 90%;
     display: flex;
@@ -127,39 +118,35 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-.welcome {
-    margin-top: 20px;
-
-    align-items: center;
-    text-align: center;
-}
 .direccion {
     margin-top: 20px;
     text-align: left;
 }
-
+.direccion p{
+    text-indent: 12px;
+}
 .direccion h4 {
     border-left: 7px solid rgba(235, 104, 255, 0.602);
     padding-left: 0.3rem;
     color: rgb(146, 87, 158);
 }
-
 .video-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
     height: 600px;
-    width: 370px;
+    width: 400px;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #000;
 }
-
 .video-container video {
-    margin-top: 20px;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-
 .formulario {
     width: 400px;
+    height: 600px;
     padding: 1rem;
     margin: 2rem;
     background-color: lightyellow;
@@ -167,14 +154,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 10px #000;
 }
-
 .consultanos {
     padding: 2rem 0;
     color: rgb(146, 87, 158);
     font-weight: bolder;
     font-size: 18px;
 }
-
 .formulario input,
 .formulario select,
 .formulario option {
@@ -190,7 +175,6 @@ body {
     font-size: 0.9rem;
     color: black;
 }
-
 textarea {
     width: 80%;
     height: 80px;
@@ -198,7 +182,6 @@ textarea {
     color: black;
     padding: 10px;
 }
-
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -207,7 +190,6 @@ textarea {
     margin-left: 10%;
     gap: 10px;
 }
-
 input[type="submit"] {
     background-color: rgb(248, 228, 17);
     color: black;
@@ -222,13 +204,11 @@ input[type="reset"] {
     border: none;
     border-radius: 4px;
 }
-
 input[type="submit"]:hover,
 [type="reset"]:hover {
     background-color: rgb(202, 162, 239);
     cursor: pointer;
 }
-
 /*//////////////////////FIN DE LA PAG CONTACTO/////////////////////*/
 
 /*FOOTER*/
@@ -262,6 +242,7 @@ footer {
     text-align: center;
     font-size: 12px;
     word-spacing: 2px;
+    
 }
 .contenedor-redes-sociales {
     padding-top: 0px;
@@ -270,7 +251,6 @@ footer {
     align-items: center;
     margin-bottom: 0px;
 }
-
 .icono-redes {
     position: relative;
     font-size: 0px;
@@ -280,7 +260,6 @@ footer {
     border-radius: 50%;
     transition: all 0.5s;
 }
-
 .icono-redes:hover {
     background-color: rgb(146, 87, 158);
     box-shadow: 0px 0px 20px rgb(146, 87, 158);
@@ -305,7 +284,6 @@ footer {
     transform: translate(-50%, -50%);
     font-size: 1.7rem;
 }
-
 /*Boton de ir arriba*/
 #button-up {
     width: 30px;
@@ -335,12 +313,10 @@ footer {
         height: 60px;
         flex-wrap: wrap;
     }
-
     .logo {
         padding: 0px 20px;
         height: 58px;
     }
-
     .logo2 {
         padding: 10px 0 10px 0px;
         height: 60px;
@@ -369,17 +345,14 @@ footer {
         left: 100%;
         transition: 0.4s;
     }
-
     .nav-menu-item {
         line-height: 60px;
     }
-
     .nav-menu-link:hover,
     .nav-menu-link_active {
         background: none;
         color: rgb(202, 162, 239);
     }
-
     .nav-toggle {
         display: block;
         cursor: pointer;
@@ -393,7 +366,6 @@ footer {
         padding-bottom: 150px;
         font-size: 14px;
     }
-
     .main_contacto {
         margin-left: 0px;
         margin-right: 0px;
@@ -401,10 +373,14 @@ footer {
     }
     #map {
         height: 280px;
-        width: 340px;
+        width: 280px;
+    }
+    .mapa{
+        height: 490px;
+        width: 280px;
     }
     .direccion {
-        margin-top: 20px;
+        margin-top: 30px;
         margin-left: 50px;
         margin-right: 10px;
         text-align: left;
@@ -412,9 +388,20 @@ footer {
     .direccion h4 {
         margin-left: 0px;
     }
+    .video-container {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        height: 450px;
+        width: 280px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px #000;
+    }
     .formulario {
         padding: 20px;
         margin: 10px;
+        width: 280px;
+        height: 520px;
     }
     .container-form {
         margin-bottom: 40px;
@@ -422,21 +409,44 @@ footer {
     .texto {
         font-size: 14px;
     }
-
     footer {
         height: 160px;
         padding-top: 0px;
     }
-
     .footer-texto {
         max-height: 80px;
         font-size: 13px;
         line-height: 60px;
     }
-
     /*Boton de ir arriba*/
     #button-up {
         bottom: 39px;
         right: 32px;
+    }
+}
+/*QUERY MODO MOBILE*/
+@media (max-width: 576px) {
+    .icono-redes {
+        margin: 10px;
+    }
+    .aside-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 0px;
+    }
+    .texto {
+        font-size: 12px;
+    }
+    .textofig {
+        font-size: 10px;
+    }
+    footer {
+        height: 160px;
+        padding-top: 0px;
+    }
+    .footer-texto {
+        max-height: 100px;
+        font-size: 12px;
+        line-height: 40px;
     }
 }
