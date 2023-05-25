@@ -847,7 +847,7 @@ footer {
     }
     .wrapper_news img,
     .wrapper_news2 img {
-        max-width: 260px;
+        max-width: 250px;
         float: none;
         margin: 0 auto;
         display: block;
