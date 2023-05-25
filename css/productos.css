@@ -253,6 +253,7 @@ body {
     height: 2em;
     margin: 1em;
     cursor: pointer;
+    margin-top: 60px;
  }
  .slider .points .active{
     color: orange;
@@ -505,7 +506,7 @@ footer {
     
     }
     
-    
+   
 /*QUERY MODO MOBILE*/
 @media (max-width: 576px) {
 .main_ppal {
@@ -538,15 +539,22 @@ footer {
     font-size: 12px;
     }
 /* products */
+.categories{
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+
+}
 
 .categories .category_item{
-    width: 37%;
+    width: 120%;
     text-align: center;
     height: 20px;
     font-size: 11px;
 }
 
 /* flip-card */
+
 .products-list .product-item a{
     height: 30px;
     box-sizing: border-box;
@@ -567,8 +575,7 @@ font-size: 8px;
 font-size: 10px;
 }
 .slider .points{
-    padding-top: 40px;
-    
+    padding-top: 40px;  
  }
 
 /* ---------- */
@@ -584,4 +591,36 @@ footer {
     line-height: 40px;
     }
 }
-    
+
+/*QUERY MODO MOBILE-little*/
+
+    @media (max-width: 375px) {
+        .main_productos {
+          margin-top: 40px;
+          padding: 20px 5% 0;
+        }
+      
+        .store-products {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+      
+        .categories .category_item {
+          font-size: 14px;
+          box-sizing: border-box;
+          margin: 0;
+          height: 25px;
+        }
+        .slider .point{
+            margin: 0.5em;
+         }
+        
+         .front{
+            font-size: 9px;
+            text-align: center;
+            box-sizing: border-box;
+
+            }
+
+
+    }
