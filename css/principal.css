@@ -9,15 +9,15 @@
 body {
     margin-top: 80px;
     position: relative;
-    padding-bottom: 160px;  
-    min-height: 100vh;    /* No tocar, sirve para anclar el footer*/
+    padding-bottom: 160px;
+    min-height: 100vh; /* No tocar, sirve para anclar el footer*/
 }
 
 /*CSS DEL HEADER*/
 .header {
     background-color: rgb(248, 228, 17);
     height: 80px;
-    position: fixed;    /*para que quede fija la barra de nav*/
+    position: fixed; /*para que quede fija la barra de nav*/
     width: 100%;
     top: 0;
     left: 0;
@@ -32,10 +32,18 @@ body {
 
 /*Animaciones del logo*/
 @keyframes animacionlogo {
-    0% { transform: rotate(0); }
-    50% { transform: rotate(360deg); }
-    80% { transform: rotate(360deg); }
-    100% { transform: rotate(0); }
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    80% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 .logo2 {
@@ -48,8 +56,8 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;/*avaliable breakpoints , 576 768 1200 */
-    margin: 0 auto;/*para que quede centrado en el navegador*/
+    max-width: 1200px; /*avaliable breakpoints , 576 768 1200 */
+    margin: 0 auto; /*para que quede centrado en el navegador*/
 }
 
 .nav-link {
@@ -60,14 +68,14 @@ body {
 .nav-menu {
     display: flex;
     margin-right: 20px;
-    list-style: none;    /*quita los puntos del listado*/
+    list-style: none; /*quita los puntos del listado*/
 }
 
 .nav-menu-item {
     font-size: 14px;
     margin: 0 5px;
     line-height: 80px;
-    width: max-content;    /*para que no me quite palabras si son mas de 2 al achicar*/
+    width: max-content; /*para que no me quite palabras si son mas de 2 al achicar*/
 }
 
 .nav-menu-link {
@@ -114,7 +122,6 @@ body {
     background-size: cover;
     background-position: center;
     transition: all 0.1s ease-out;
-    background-image: url("../assets/img/banner-1.jpg");
     animation: banner 21s infinite linear;
 }
 
@@ -140,41 +147,58 @@ body {
 }
 
 @keyframes banner {
-    0% { background-image: url("/img/Ppal/portada1.png"); }
-    33% { background-image: url("/img/Ppal/portada1.png"); }
-    34% { background-image: url("/img/Ppal/portada2.png"); }
-    66% { background-image: url("/img/Ppal/portada2.png"); }
-    67% { background-image: url("/img/Ppal/portada3.png"); }
-    100% { background-image: url("/img/Ppal/portada3.png"); }
+    0% {
+        background-image: url("/img/Ppal/portada1.png");
+    }
+    33% {
+        background-image: url("/img/Ppal/portada1.png");
+    }
+    34% {
+        background-image: url("/img/Ppal/portada2.png");
+    }
+    66% {
+        background-image: url("/img/Ppal/portada2.png");
+    }
+    67% {
+        background-image: url("/img/Ppal/portada3.png");
+    }
+    100% {
+        background-image: url("/img/Ppal/portada3.png");
+    }
 }
 
 /*letras en movimiento */
 .marquee-container {
-    margin: 13px; 
+    margin: 13px;
     overflow: hidden;
 }
 
 .marquee-content {
-	display: inline-block;
-	white-space: nowrap;
-	animation: marquee 30s linear infinite;
-	font-size: 18px;
-	width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+    font-size: 18px;
+    width: 100%;
 }
 
 @keyframes marquee {
-	0% { transform: translateX(100%); }
-	100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 /*Fin de letras en mov.*/
 
-main, aside {
-	flex: 1;
-	padding: 0px 0px;
-	box-sizing: border-box;
-	margin: 0px 0px;
-	display: flex;
-	flex-direction: column;
+main,
+aside {
+    flex: 1;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -186,40 +210,41 @@ aside {
 }
 
 .background {
-	background-color: rgba(238,210,251,255);
+    background-color: rgba(238, 210, 251, 255);
 }
 
 .background2 {
-	background-color: lightyellow;
+    background-color: lightyellow;
 }
 
-.aside {	
+.aside {
     border-top: 1px solid black;
-	flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
 .aside2 {
-	flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
 .section {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;	
-	align-items:center ;
-	text-align: center;
-	padding: 80px 0px 80px  0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 0px 80px 0;
 }
 
 /* Seccion news*/
-.wrapper_news, .wrapper_news2 {
+.wrapper_news,
+.wrapper_news2 {
     margin: 10px 10px;
-    width: 70%;        
+    width: 70%;
     text-align: left;
 }
 
@@ -230,7 +255,7 @@ aside {
     padding: 0;
     box-shadow: 0 5px 10px rgb(146, 87, 158);
 }
-.wrapper_news2 img{
+.wrapper_news2 img {
     max-width: 500px;
     border-radius: 10px;
     margin-right: 0px;
@@ -329,14 +354,14 @@ aside {
     margin-bottom: 10px;
     margin-left: 10%;
     margin-right: 10%;
-    text-align: justify
+    text-align: justify;
 }
 
 .card_cata {
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 20px;
-	text-decoration: underline;
+    text-decoration: underline;
     max-height: max-content;
     text-align: center;
 }
@@ -344,7 +369,7 @@ aside {
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 20px;
-	text-decoration: underline;
+    text-decoration: underline;
     max-height: max-content;
     text-align: center;
 }
@@ -369,7 +394,7 @@ aside {
     margin-bottom: 0px;
     perspective: 1000px;
     position: relative;
-    width: 300px;
+    width: 280px;
     height: 225px;
     margin: 20px;
 }
@@ -422,7 +447,6 @@ aside {
 }
 
 .card_cat .back .link {
-    
     height: 50px;
     line-height: 50px;
     text-decoration: none;
@@ -445,7 +469,7 @@ aside {
 .card_cat .back p {
     letter-spacing: 1px;
     font-size: 14px;
-    text-align: justify
+    text-align: justify;
 }
 
 .card_cat:hover .front {
@@ -464,7 +488,7 @@ aside {
     margin-top: 0px;
     margin-bottom: 0px;
     position: relative;
-	width: 300px;
+    width: 300px;
     margin: 10px;
     align-items: center;
     text-align: center;
@@ -479,7 +503,7 @@ aside {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     font-size: 14px;
     position: relative;
-	width: 100%;
+    width: 100%;
     text-align: center;
 }
 
@@ -513,14 +537,14 @@ aside {
 }
 
 .new-products {
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center; 
-	flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
-	  
-.car_new{
+
+.car_new {
     margin-top: 10px;
 }
 
@@ -528,7 +552,7 @@ aside {
 .carousel_aside_wrapper {
     height: 225px;
     position: sticky;
-    width: 300px;
+    width: 280px;
     display: block;
     margin: 0px auto;
 }
@@ -551,7 +575,7 @@ aside {
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 12px;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .arrow-prev {
@@ -670,9 +694,9 @@ aside {
     font-weight: bold;
     color: rgb(146, 87, 158);
     text-transform: uppercase;
-	margin-top: 30px;
-	margin-bottom: 10px;
-	font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
     text-decoration: underline;
 }
 
@@ -689,21 +713,39 @@ aside {
 }
 
 @-moz-keyframes parpadeo {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes parpadeo {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes parpadeo {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .price_info {
     font-size: 14px;
@@ -833,7 +875,8 @@ footer {
 
 /*QUERY PARA NEWS*/
 @media (min-width: 769px) and (max-width: 1350px) {
-    .wrapper_news img, .wrapper_news2 img {
+    .wrapper_news img,
+    .wrapper_news2 img {
         max-width: 300px;
     }
 }
@@ -853,7 +896,7 @@ footer {
     .logo2 {
         padding: 10px 0 10px 0px;
         height: 60px;
-        left: 35%;        /* centrado horizontalmente */
+        left: 35%; /* centrado horizontalmente */
         transform: translateX(-50%);
     }
 
@@ -876,7 +919,7 @@ footer {
         width: 100%;
         padding: 0px;
         height: calc(100% - 60px);
-        overflow-y: auto;        /*añadir scroll cuando se minimiza el menu*/
+        overflow-y: auto; /*añadir scroll cuando se minimiza el menu*/
         left: 100%;
         transition: 0.4s;
     }
@@ -909,17 +952,17 @@ footer {
     .banner-content h1 {
         font-size: 18px;
     }
-    
+
     .marquee-container {
-		margin: 5px;
-	}
-	  
-	.marquee-content {
-		animation: marquee 20s linear infinite;
-		font-size: 16px;
-		width: 100%;
-	}
-	  
+        margin: 5px;
+    }
+
+    .marquee-content {
+        animation: marquee 20s linear infinite;
+        font-size: 16px;
+        width: 100%;
+    }
+
     .flip-card-back {
         font-size: 3vw;
     }
@@ -928,7 +971,8 @@ footer {
         flex-direction: column;
     }
 
-	main, aside {
+    main,
+    aside {
         flex: 1;
         padding: 0px 0px;
         box-sizing: border-box;
@@ -937,8 +981,8 @@ footer {
         max-width: 100%;
         flex-direction: column;
     }
-	
-    .background2{
+
+    .background2 {
         background-color: white;
     }
 
@@ -946,16 +990,18 @@ footer {
         flex-direction: column;
         text-align: justify;
         padding: 20px 0;
-		width: 100%;
+        width: 100%;
     }
 
-    .wrapper_news, .wrapper_news2 {
-        width: 70%;      
-        text-align: center;  
+    .wrapper_news,
+    .wrapper_news2 {
+        width: 70%;
+        text-align: center;
     }
-      
-    .wrapper_news img, .wrapper_news2 img {
-        max-width: 300px;
+
+    .wrapper_news img,
+    .wrapper_news2 img {
+        max-width: 260px;
         float: none;
         margin: 0 auto;
         display: block;
@@ -964,18 +1010,17 @@ footer {
     .wrapper_news h3 {
         font-size: 16px;
         text-align: center;
-        margin-top: 20px; 
-        margin-bottom: 10px;  
-            
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     .wrapper_news2 h3 {
         font-size: 16px;
         text-align: center;
         margin-top: 20px;
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
-    
+
     .card h3 {
         color: rgb(202, 162, 239);
     }
@@ -988,26 +1033,25 @@ footer {
         font-size: 12px;
     }
 
-	.container {
+    .container {
         grid-template-columns: 1fr;
     }
 
-	.card_cata {
+    .card_cata {
         margin-top: 20px;
         font-size: 16px;
         margin-bottom: 10px;
-	}
+    }
 
     .card_cata2 {
         margin-top: 20px;
         font-size: 16px;
         margin-bottom: 10px;
-        
     }
     .card_aside {
         margin: 10px;
     }
-    
+
     .card {
         width: 100%;
     }
@@ -1033,13 +1077,19 @@ footer {
     }
 
     .card_iframe_section {
-		background-color: rgba(238,210,251,255);
-	}   
+        background-color: rgba(238, 210, 251, 255);
+    }
 
-	.card_iframe {
-		width: 70%;
-	}
-
+    .card_iframe {
+        width: 70%;
+    }
+    .img-gallery {
+        width: 60%;
+        gap: 20px;
+    }
+    .img-gallery img {
+        width: 60%;
+    }
     .textp {
         font-weight: bold;
         color: black;
@@ -1049,12 +1099,12 @@ footer {
         font-size: 16px;
         text-decoration: underline;
     }
-    
+
     .parpadea {
-        animation-name:none;
-        -webkit-animation-name:none ;
+        animation-name: none;
+        -webkit-animation-name: none;
     }
-    
+
     footer {
         height: 160px;
         padding-top: 0px;
@@ -1065,7 +1115,7 @@ footer {
         font-size: 13px;
         line-height: 60px;
     }
-	
+
     /*Boton de ir arriba*/
     #button-up {
         bottom: 39px;
@@ -1094,7 +1144,7 @@ footer {
     .new-products,
     .categories,
     .services {
-        display: grid;        /* Convierte en grilla */
+        display: grid; /* Convierte en grilla */
     }
 
     .icono-redes {
