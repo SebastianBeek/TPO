@@ -28,18 +28,10 @@ body {
 }
 /*Animaciones del logo*/
 @keyframes animacionlogo {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(360deg);
-    }
-    80% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
+    0% { transform: rotate(0); }
+    50% { transform: rotate(360deg); }
+    80% { transform: rotate(360deg); }
+    100% { transform: rotate(0); }
 }
 .logo2 {
     padding: 15px 0px 15px 0px;
@@ -114,9 +106,10 @@ body {
     display: block;
     width: 90%;
     padding: 5px 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     background: rgb(202, 162, 239);
     border-radius: 35px;
+
     text-align: center;
     text-decoration: none;
     color: white;
@@ -138,13 +131,13 @@ body {
 .products-list .product-item {
     width: 40%;
     margin-left: 3%;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
     box-shadow: 0px 0px 6px 0px rgb(0, 0, 0, 0.22);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.products-list {
+.products-list{
     width: 100%;
     height: 20%;
 }
@@ -160,6 +153,7 @@ body {
     background: rgb(248, 228, 17);
     border-radius: 20px;
     height: 45px;
+
     color: black;
     text-align: center;
     text-decoration: none;
@@ -172,7 +166,7 @@ body {
     display: block;
     width: 100%;
     padding: 8px 0;
-    height: 80px;
+    height: 75px;
 }
 .cardBox:hover .card {
     transform: rotateY(180deg);
@@ -197,7 +191,7 @@ body {
     width: 100%;
     font-size: 20px;
     margin-top: 0px;
-    padding-bottom: 30px;
+    margin-bottom: 40px;
 }
 .back {
     transform: rotateY(180deg);
@@ -228,7 +222,7 @@ body {
 .slider .points {
     width: 100%;
     display: flex;
-    height: 60px;
+
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -419,7 +413,7 @@ footer {
         font-size: 14px;
     }
     /* products */
-
+    
     .categories .category_item {
         width: 80%;
         text-align: center;
@@ -479,13 +473,12 @@ footer {
         font-size: 12px;
     }
     /* products */
-
+    
     .categories .category_item {
         width: 120%;
         text-align: center;
         height: 30px;
         font-size: 11px;
-        margin-bottom: 20px;
     }
     /* flip-card */
 
@@ -508,7 +501,7 @@ footer {
     .price {
         font-size: 10px;
     }
-
+    
     /* ---------- */
     footer {
         height: 160px;
@@ -520,3 +513,29 @@ footer {
         line-height: 40px;
     }
 }
+
+/*QUERY MODO MOBILE-little*/
+/*@media (max-width: 375px) {
+    .main_productos {
+        margin-top: 40px;
+        padding: 20px 5% 0;
+    }
+    .store-products {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .categories .category_item {
+        font-size: 14px;
+        box-sizing: border-box;
+        margin: 0;
+        height: 25px;
+    }
+    .slider .point {
+        margin: 0.5em;
+    }
+    .front {
+        font-size: 9px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}*/
