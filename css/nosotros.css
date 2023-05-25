@@ -624,3 +624,29 @@ footer {
         right: 32px;
     }
 }
+/*QUERY MODO MOBILE*/
+@media (max-width: 576px) {
+    .icono-redes {
+        margin: 10px;
+    }
+    .aside-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 0px;
+    }
+    .texto {
+        font-size: 12px;
+    }
+    .textofig {
+        font-size: 10px;
+    }
+    footer {
+        height: 160px;
+        padding-top: 0px;
+    }
+    .footer-texto {
+        max-height: 100px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+}
