@@ -163,7 +163,7 @@ body {
     width: 400px;
     padding: 1rem;
     margin: 2rem;
-    background-color: rgba(255, 255, 181, 0.4);
+    background-color: lightyellow;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 5px 10px #000;
@@ -176,7 +176,7 @@ body {
     font-size: 18px;
 }
 
-.formulario input {
+.formulario input, .formulario select, .formulario option {
     width: 80%;
     display: inline-block;
     margin-bottom: 2rem;
@@ -194,7 +194,7 @@ textarea {
     width: 80%; 
     height: 80px;
     background-color: transparent;
-    color: white;
+    color: black;
     padding: 10px;
 }
 

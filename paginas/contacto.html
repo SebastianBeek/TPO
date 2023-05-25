@@ -39,7 +39,6 @@
         </header>
         <main class="main_contacto">
             <div class="container-form">
-                
                     <div class="video-container">
                         <video src="/img/video_promo.mp4" controls></video>
                     </div>
@@ -57,7 +56,7 @@
                             <p>CABA y a nivel nacional</p>
                         </div>
                     </div>
-                <form class="formulario" id="myForm">
+                <form class="formulario" id="myForm" name="myForm" onsubmit="return validacion()">
                     <p class="consultanos">CONSULTÁNOS</p>
                     <div>
                         <input type="text" id="nombre_apellido" name="nombre_apellido" placeholder="Nombre y Apellido">
@@ -66,14 +65,38 @@
                         <input type="number" id="cel" name="cel" placeholder="Número de teléfono">
                     </div>
                     <div>
-                        <input type="text" id="provincia" name="provincia" placeholder="Provincia">
+                        <select id="provincia" name="provincia" >
+                            <option>Provincia</option>
+                            <option value="">Caba</option>
+                            <option value="">Buenos Aires</option> 
+                            <option value="">Catamarca</option>
+                            <option value="">Chaco</option>
+                            <option value="">Chubut</option>
+                            <option value="">Córdoba</option>
+                            <option value="">Corrientes</option>
+                            <option value="">Entre Ríos</option>
+                            <option value="">Formosa</option>
+                            <option value="">Jujuy</option>
+                            <option value="">La Pampa</option>
+                            <option value="">La Rioja</option>
+                            <option value="">Mendoza</option>
+                            <option value="">Misiones</option>
+                            <option value="">Neuquén</option>
+                            <option value="">Río Negro</option>
+                            <option value="">Salta</option>
+                            <option value="">San Juan</option>
+                            <option value="">Santa Cruz</option>
+                            <option value="">Santa Fe</option>
+                            <option value="">Santiago del Estero</option>
+                            <option value="">Tierra del Fuego</option>
+                            <option value="">Tucumán</option>
                     </div>
                     <div>
-                        <input type="email" id="mail" name="mail" placeholder="Correo electrónico">
+                        <input type="email" id="mail" name="mail" placeholder="Correo electrónico" required>
                     </div>
                     <textarea class="comentario" id="comentario" name="comentario" placeholder="Dejanos un comentario"></textarea>
                     <div class="buttons">
-                        <input type="reset" value="Borrar" onclick="document.getElementById('myForm').reset()">
+                        <input type="reset" value="Borrar">
                         <input type="submit" value="Enviar">
                     </div>
                 </form>
