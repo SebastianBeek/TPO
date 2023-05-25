@@ -29,20 +29,11 @@ body {
 }
 /*Animaciones del logo*/
 @keyframes animacionlogo {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(360deg);
-    }
-    80% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
+    0% { transform: rotate(0); }
+    50% { transform: rotate(360deg); }
+    80% { transform: rotate(360deg); }
+    100% { transform: rotate(0); }
 }
-
 .logo2 {
     padding: 15px 0px 15px 0px;
     height: 80px;
@@ -64,25 +55,21 @@ body {
     margin-right: 20px;
     list-style: none; /*quita los puntos del listado*/
 }
-
 .nav-menu-item {
     font-size: 14px;
     margin: 0 5px;
     line-height: 80px;
     width: max-content; /*para que no me quite palabras si son mas de 2 al achicar*/
 }
-
 .nav-menu-link {
     padding: 8px 12px;
     border-radius: 5px;
 }
-
 .nav-menu-link:hover,
 .nav-menu-link_active {
     background-color: rgb(202, 162, 239);
     transition: 0.5s;
 }
-
 .nav-menu-link-cat:hover,
 .nav-menu-link-cat_active {
     background: none;
@@ -208,7 +195,6 @@ h2 {
     text-align: center;
     padding: 150px 0px 220px 0;
 }
-
 .staff h2 {
     text-align: center;
     padding: 20px 0 90px 0;
@@ -220,7 +206,6 @@ h2 {
     justify-content: center;
     gap: 80px;
 }
-
 .tarjeta {
     height: 150px;
     width: 150px;
@@ -234,7 +219,6 @@ h2 {
     justify-content: center;
     text-align: center;
 }
-
 .tarjeta::before {
     content: "";
     position: absolute;
@@ -247,7 +231,6 @@ h2 {
     );
     animation: rotar 2s linear infinite;
 }
-
 @keyframes rotar {
     from {
         transform: rotate(0deg);
@@ -256,7 +239,6 @@ h2 {
         transform: rotate(-360deg);
     }
 }
-
 .tarjeta:nth-child(1)::after {
     content: "";
     position: absolute;
@@ -267,7 +249,6 @@ h2 {
     border-radius: 50%;
     box-shadow: inset 0 5px 10px #0000008c;
 }
-
 .tarjeta:nth-child(2)::after {
     content: "";
     position: absolute;
@@ -278,7 +259,6 @@ h2 {
     border-radius: 50%;
     box-shadow: inset 0 5px 10px #0000008c;
 }
-
 .tarjeta:nth-child(3)::after {
     content: "";
     position: absolute;
@@ -335,13 +315,11 @@ h2 {
     text-align: center;
     padding: 15px 0;
 }
-
 .subtítulo {
     background: rgb(146, 87, 158);
     text-align: center;
     border-radius: 4px;
 }
-
 .contenedor-reseñas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -355,7 +333,6 @@ h2 {
         "widget-3 widget-4"
         "widget-5 widget-6";
 }
-
 .widget-1,
 .widget-2,
 .widget-3,
@@ -371,37 +348,31 @@ h2 {
     justify-content: center;
     border-radius: 4px;
 }
-
 .widget-1 {
     grid-area: widget-1;
     display: flex;
     flex-direction: column;
 }
-
 .widget-2 {
     grid-area: widget-2;
     display: flex;
     flex-direction: column;
 }
-
 .widget-3 {
     grid-area: widget-3;
     display: flex;
     flex-direction: column;
 }
-
 .widget-4 {
     grid-area: widget-4;
     display: flex;
     flex-direction: column;
 }
-
 .widget-5 {
     grid-area: widget-5;
     display: flex;
     flex-direction: column;
 }
-
 .widget-6 {
     grid-area: widget-6;
     display: flex;
@@ -449,7 +420,6 @@ footer {
     align-items: center;
     margin-bottom: 0px;
 }
-
 .icono-redes {
     position: relative;
     font-size: 0px;
@@ -459,7 +429,6 @@ footer {
     border-radius: 50%;
     transition: all 0.5s;
 }
-
 .icono-redes:hover {
     background-color: rgb(146, 87, 158);
     box-shadow: 0px 0px 20px rgb(146, 87, 158);
@@ -548,7 +517,6 @@ footer {
         left: 100%;
         transition: 0.4s;
     }
-
     .nav-menu-item {
         line-height: 60px;
     }
@@ -635,25 +603,21 @@ footer {
         transition: 0.5s;
         border-radius: 10px;
     }
-
     .team-container {
         gap: 30px;
     }
     .texto {
         font-size: 14px;
     }
-
     footer {
         height: 160px;
         padding-top: 0px;
     }
-
     .footer-texto {
         max-height: 80px;
         font-size: 13px;
         line-height: 60px;
     }
-
     /*Boton de ir arriba*/
     #button-up {
         bottom: 39px;
