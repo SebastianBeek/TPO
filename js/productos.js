@@ -1,12 +1,9 @@
-////////////////////////////PRODUCTOS////////////////////////////////////
-
 //SELECCIONO TODOS LOS ELEMENTOS DE LA CLASS SLIDER 
 const sliders = document.querySelectorAll('.slider');
 
 sliders.forEach(slider => {
   const item = slider.querySelector('.item');
   const point = slider.querySelectorAll('.point');
-
 
   point.forEach((element, i) => {
     point[i].addEventListener('click', () => {
@@ -24,8 +21,6 @@ sliders.forEach(slider => {
 });
 
 //FILTRADO DE PRODUCTOS
-
-//FUNCION DONDE TOMO LOS ITEMS
 document.addEventListener('DOMContentLoaded', function () {
     const categoryItems = document.querySelectorAll('.category_item');
     const productItems = document.querySelectorAll('.product-item');
@@ -46,5 +41,3 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
-
-////////////////////////////Fin de PRODUCTOS////////////////////////////////////

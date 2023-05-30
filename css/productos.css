@@ -2,7 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    cursor: url("/img/patita_cursor20x20.png"), auto;
+    cursor: url("../img/patita_cursor20x20.png"), auto;
     font-family: "Fira Sans Condensed", sans-serif;
 }
 body {

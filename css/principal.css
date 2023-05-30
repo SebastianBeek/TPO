@@ -2,7 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    cursor: url("/img/patita_cursor20x20.png"), auto;
+    cursor: url("../img/patita_cursor20x20.png"), auto;
     font-family: "Fira Sans Condensed", sans-serif;
 }
 body {
@@ -122,12 +122,12 @@ body {
     text-align: center;
 }
 @keyframes banner {
-    0% { background-image: url("/img/Ppal/portada1.png");}
-    33% { background-image: url("/img/Ppal/portada1.png");}
-    34% { background-image: url("/img/Ppal/portada2.png");}
-    66% { background-image: url("/img/Ppal/portada2.png");}
-    67% { background-image: url("/img/Ppal/portada3.png");}
-    100% {  background-image: url("/img/Ppal/portada3.png");}
+    0% { background-image: url("../img/Ppal/portada1.png");}
+    33% { background-image: url("../img/Ppal/portada1.png");}
+    34% { background-image: url("../img/Ppal/portada2.png");}
+    66% { background-image: url("../img/Ppal/portada2.png");}
+    67% { background-image: url("../img/Ppal/portada3.png");}
+    100% {  background-image: url("../img/Ppal/portada3.png");}
 }
 /*letras en movimiento */
 .marquee-container {
@@ -200,14 +200,12 @@ aside {
 }
 .wrapper_news img {
     width: 400px;
-    border-radius: 10px;
     margin-right: 0px;
     padding: 0;
     box-shadow: 0 5px 10px rgb(146, 87, 158);
 }
 .wrapper_news2 img {
     width: 400px;
-    border-radius: 10px;
     margin-right: 0px;
     padding: 0;
     box-shadow: 0 5px 10px #000;
@@ -263,12 +261,10 @@ aside {
 .card img {
     max-width: 100%;
     margin: 0 auto;
-    border-radius: 10px;
 }
 .card2 img {
     max-width: 100%;
     margin: 0 auto;
-    border-radius: 10px;
 }
 .card h3 {
     margin-top: 10px;
@@ -341,7 +337,6 @@ aside {
 .card_cat .front {
     transform: perspective(600px) rotateY(0deg);
     box-shadow: 0 5px 10px #000;
-    border-radius: 10px;
 }
 .card_cat .front img {
     position: relative;
@@ -368,7 +363,6 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 10px #000;
 }
@@ -428,7 +422,6 @@ aside {
     width: 260px;
     max-width: 100%;
     margin: 0;
-    border-radius: 10px;
     box-shadow: 0 5px 10px #000;
 }
 .card_aside h2 {
@@ -466,8 +459,7 @@ aside {
     width: 260px;
     display: block;
     margin: 0px auto;
-    
-}
+ }
 .carousel_aside_item {
     position: absolute;
     top: 0;
@@ -477,7 +469,6 @@ aside {
     padding: 25px 50px;
     opacity: 0;
     transition: all 0.5s ease-in-out;
-    border-radius: 10px;
     box-shadow: 0 5px 10px rgb(146, 87, 158);
 }
 .arrow {
@@ -516,15 +507,15 @@ aside {
 .item-1 {
     z-index: 2;
     opacity: 1;
-    background: url("/img/Ppal/productonuevo11.png");
+    background: url("../img/Ppal/productonuevo11.png");
     background-size: cover;
 }
 .item-2 {
-    background: url("/img/Ppal/productonuevo12.png");
+    background: url("../img/Ppal/productonuevo12.png");
     background-size: cover;
 }
 .item-3 {
-    background: url("/img/Ppal/productonuevo13.png");
+    background: url("../img/Ppal/productonuevo13.png");
     background-size: cover;
 }
 *:target ~ .item-4 {
@@ -541,15 +532,15 @@ aside {
 .item-4 {
     z-index: 2;
     opacity: 1;
-    background: url("/img/Ppal/productonuevo21.png");
+    background: url("../img/Ppal/productonuevo21.png");
     background-size: cover;
 }
 .item-5 {
-    background: url("/img/Ppal/productonuevo22.png");
+    background: url("../img/Ppal/productonuevo22.png");
     background-size: cover;
 }
 .item-6 {
-    background: url("/img/Ppal/productonuevo23.png");
+    background: url("../img/Ppal/productonuevo23.png");
     background-size: cover;
 }
 *:target ~ .item-7 {
@@ -566,15 +557,15 @@ aside {
 .item-7 {
     z-index: 2;
     opacity: 1;
-    background: url("/img/Ppal/choco_promo1.png");
+    background: url("../img/Ppal/choco_promo1.png");
     background-size: cover;
 }
 .item-8 {
-    background: url("/img/Ppal/choco_promo2.png");
+    background: url("../img/Ppal/choco_promo2.png");
     background-size: cover;
 }
 .item-9 {
-    background: url("/img/Ppal/choco_promo3.png");
+    background: url("../img/Ppal/choco_promo3.png");
     background-size: cover;
 }
 /*Texto parpadeante*/
@@ -847,7 +838,8 @@ footer {
     }
     .wrapper_news img,
     .wrapper_news2 img {
-        max-width: 240px;
+        width: 100%;
+        height: 100%;
         float: none;
         margin: 0 auto;
         display: block;
