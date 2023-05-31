@@ -138,6 +138,7 @@ h2 {
     text-align: center;
     margin: 30px 90px 60px 120px;
     font-size: 20px;
+    font-style: italic;
 }
 .img-gallery {
     display: flex;
@@ -307,88 +308,109 @@ h2 {
 
 /***********************************************************/
 
-.reseñas {
-    overflow: hidden;
-    padding: 80px 30px 80px 60px;
+.reseñas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 30px 60px 30px;
+    
 }
-.reseña h2 {
-    text-align: center;
-    margin: 0px 90px 0px 80px;
+.reseñas_header{
+    margin: 100px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.título {
-    margin: 5px;
+.reseñas_header span{
+    font-weight: bold;
+    font-style: italic;
     text-align: center;
+    margin: 30px 90px 20px 120px;
     font-size: 20px;
-    margin: 50px auto;
 }
-.cliente {
-    color: white;
-    text-align: center;
-    padding: 15px 0;
+.reseñas_header h1{
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0px 0px;
+    font-weight: bold;
+    font-style: italic;
 }
-.subtítulo {
-    background: rgb(146, 87, 158);
-    text-align: center;
-    border-radius: 4px;
-}
-.contenedor-reseñas {
+
+
+.reseña_contenedor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    margin: 20px auto;
+    margin: auto;
 
     grid-template-areas:
         "widget-1 widget-2"
         "widget-3 widget-4"
         "widget-5 widget-6";
 }
-.widget-1,
-.widget-2,
-.widget-3,
-.widget-4,
-.widget-5,
-.widget-6 {
+
+.reseñas_caja {
+    flex-basis: 100%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px 10px 20px 10px;;
+    margin: 10px 20px 10px 20px;
     background: rgb(202, 162, 239);
-    padding: 20px;
-    height: auto;
-    text-align: center;
+
+}
+.perfil_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+
+}
+.perfil_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+}
+.perfil{
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 4px;
+    margin-right: 10px;
 }
-.widget-1 {
-    grid-area: widget-1;
+.usuario{
     display: flex;
     flex-direction: column;
+    
 }
-.widget-2 {
-    grid-area: widget-2;
+.usuario strong {
+    font-size: 16px;
+}
+.usuario span{
+    color: #706e6e;
+    font-size: 14px;
+}
+.estrellas{
+    color: #ffdd1c;
+    font-size: 14px;
+}
+.caja_top{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
-.widget-3 {
-    grid-area: widget-3;
-    display: flex;
-    flex-direction: column;
+.comentarios p{
+    color: rgb(83, 42, 92);
+    text-align: justify;
+    font-size: 16px;
+    text-indent: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
-.widget-4 {
-    grid-area: widget-4;
-    display: flex;
-    flex-direction: column;
-}
-.widget-5 {
-    grid-area: widget-5;
-    display: flex;
-    flex-direction: column;
-}
-.widget-6 {
-    grid-area: widget-6;
-    display: flex;
-    flex-direction: column;
-}
+
 
 /*//////////////////////FIN DE LA PAG NOSOTROS/////////////////////*/
 
@@ -531,7 +553,6 @@ footer {
     .nav-menu-item {
         line-height: 60px;
     }
-
     .nav-menu-link:hover,
     .nav-menu-link_active {
         background: none;
@@ -583,24 +604,15 @@ footer {
     }
     h2,
     .título {
-        margin: 60px 30px 30px 30px;
+        margin: 30px 30px 30px 30px;
         font-size: 17px;
-    }
-    .cliente {
-        font-size: 16px;
-    }
-    .reseñas {
-        padding: 0px 30px 30px 30px;
-    }
-    .reseña h2 {
-        margin: 0px 0px 30px 50px;
     }
     .galeria {
         padding: 40px 0 40px 0;
     }
 
     .galeria h2 {
-        margin: 30px 0px 10px 40px;
+        margin: 0px 0px 10px 40px;
         font-size: 17px;
     }
     .img-gallery {
@@ -617,6 +629,55 @@ footer {
     }
     .team-container {
         gap: 30px;
+    }
+    .reseñas {
+        padding: 0px 10px 40px 10px;
+    }
+    .reseñas_header{
+        margin: 0px 0 10px 0;
+    }
+    .reseñas_header span{
+        font-weight: bold;
+        text-align: center;
+        margin: 30px 0px 10px 0px;
+        font-size: 17px;
+    }
+    .reseña_contenedor {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+                   
+        grid-template-areas:
+            "widget-1" 
+            "widget-2"
+            "widget-3" 
+            "widget-4"
+            "widget-5" 
+            "widget-6";
+    }
+    .reseñas_caja {
+        flex-basis: 100%;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        padding: 20px 10px 20px 10px;;
+        margin: 10px 0px 10px 0px;
+        background: rgb(202, 162, 239);
+
+    }
+    .usuario strong {
+        font-size: 14px;
+    }
+    .usuario span{
+        font-size: 12px;
+    }
+    .estrellas{
+        font-size: 10px;
+        padding-left: 0px;
+    }
+    .comentarios p{
+        font-size: 12px;
+        text-indent: 0;
     }
     .texto {
         font-size: 14px;
