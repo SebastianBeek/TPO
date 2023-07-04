@@ -21,26 +21,40 @@ sliders.forEach(slider => {
 });
 
 //FILTRADO DE PRODUCTOS
+//FILTRADO DE PRODUCTOS
 document.addEventListener('DOMContentLoaded', function () {
-    const categoryItems = document.querySelectorAll('.category_item');
-    const productItems = document.querySelectorAll('.product-item');
+  const categoryItems = document.querySelectorAll('.category_item');
+  const productItems = document.querySelectorAll('.product-item');
 
-    categoryItems.forEach(function (item) {
-      item.addEventListener('click', function (event) {
-        event.preventDefault();
-        const category = item.getAttribute('category');
+  // Ocultar todos los productos inicialmente
+  productItems.forEach(function (product) {
+              product.style.display = 'none';
+          });
 
-        productItems.forEach(function (product) {
-          if (product.getAttribute('category') === category || category === 'all') {
-            product.style.display = 'block';
-          } else {
+  // Mostrar la primera categoría por defecto
+  const defaultCategory = categoryItems[0].getAttribute('category');
+  productItems.forEach(function (product) {
+      if (product.getAttribute('category') === defaultCategory) {
+          product.style.display = 'block';
+      }
+  });
+
+  categoryItems.forEach(function (item) {
+    item.addEventListener('click', function (event) {
+      event.preventDefault();
+      const category = item.getAttribute('category');
+
+      productItems.forEach(function (product) {
+        if (product.getAttribute('category') === category || category === 'all') {
+          product.style.display = 'block';
+        } else {
 //SINO ES IGUAL OCULTO LOS ITEMS QUE NO TENGAN ESA CATEGOTY
-            product.style.display = 'none';
-          }
-        });
+          product.style.display = 'none';
+        }
       });
     });
   });
+});
 
 
   //carrito
@@ -98,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let cartTotal = 0;
 
         cart.forEach(function(item) {
-            cartItemsDetail += `${item.id} ${item.description} (x${item.quantity}) - $${item.price.toFixed(2)}\n`; 
+            cartItemsDetail += `(x${item.quantity}) ${item.id} ${item.description}  - $${item.price.toFixed(2)}\n`; 
             cartTotal += item.price;
         });
 
@@ -114,9 +128,9 @@ document.addEventListener('DOMContentLoaded', function () {
         cart.forEach(function(item) {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-                <span>${item.id} ${item.description} (x${item.quantity})</span>
+                <span>(x${item.quantity}) ${item.id} ${item.description} </span>
                 <span>$${item.price.toFixed(2)}</span>
-                <button class="remove-btn">Eliminar</button>
+                <button class="remove-btn"><b>x</b></button>
             `;
 
             const removeBtn = listItem.querySelector(".remove-btn");
