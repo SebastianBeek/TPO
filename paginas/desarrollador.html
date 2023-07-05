@@ -43,7 +43,6 @@
             </ul>
         </nav>
     </header>
-    <span class="titulo_ppal"><br>Modo: desarrollador</span>
     <main class="main_productos">
         
         <div class="store-products">
@@ -55,62 +54,8 @@
                 <a href="../paginas/desarrollador/carrito.html" class="cat_item" category="carrito" id="carrito">Carrito</a>
             </div>
             <section class="products-list">
-                <!-- alta -->
-                <div class="product-item" category="alta">
-                    
-                    <script>
-                        const URL = "https://23016grupo5.pythonanywhere.com/"
-                        // Capturamos el evento de envío del formulario
-                        document.getElementById('formulario').addEventListener('submit', function (event) {
-                        event.preventDefault() // Evitamos que se recargue la página
-                
-                        // Obtenemos los valores del formulario
-                        var codigo = document.getElementById('codigo').value
-                        var descripcion = document.getElementById('descripcion').value
-                        var cantidad = document.getElementById('cantidad').value
-                        var precio = document.getElementById('precio').value
-                
-                        // Creamos un objeto con los datos del producto
-                        var producto = {
-                            codigo: codigo,
-                            descripcion: descripcion,
-                            cantidad: cantidad,
-                            precio: precio
-                        }
-                        console.log(producto)
-                        // Realizamos la solicitud POST al servidor
-                        fetch(URL + 'productos', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify(producto)
-                        })
-                            .then(function (response) {
-                                if (response.ok) {
-                                    return response.json() // Parseamos la respuesta JSON
-                                } else {
-                                    throw new Error('Error al agregar el producto.')
-                                }
-                            })
-                            .then(function (data) {
-                                alert('Producto agregado correctamente.')
-                                document.getElementById('codigo').value = ""
-                                document.getElementById('descripcion').value = ""
-                                document.getElementById('cantidad').value = ""
-                                document.getElementById('precio').value = ""
-                            })
-                            .catch(function (error) {
-                                console.log('Error:', error)
-                                alert('Error al agregar el producto.')
-                            })
-                        })
-                    </script>
-                </div>
-                
-                <!-- listado -->
                 <div class="product-item" category="listado">
-                    <h1>Inventario de Productos</h1>
+                    <h3>Inventario de Productos</h3>
                     <br>
                     <table>
                         <thead>
@@ -122,119 +67,45 @@
                             </tr>
                         </thead>
                         <tbody id="tablaProductos">
+                            
                         </tbody>
                     </table>
-
-                    <script>
-                        //const URL = "http://127.0.0.1:5000/"
-                        //const URL = "https://23016grupo5.pythonanywhere.com/"
-
-                        // Realizamos la solicitud GET al servidor para obtener todos los productos
-                        fetch(URL + 'productos')
-                            .then(function (response) {
-                                if (response.ok) {
-                                    return response.json() // Parseamos la respuesta JSON
-                                } else {
-                                    throw new Error('Error al obtener los productos.')
-                                }
-                            })
-                            .then(function (data) {
-                                var tablaProductos = document.getElementById('tablaProductos')
-
-                                // Iteramos sobre los productos y agregamos filas a la tabla
-                                data.forEach(function (producto) {
-                                    var fila = document.createElement('tr')
-                                    fila.innerHTML = '<td>' + producto.codigo + '</td>' +
-                                        '<td>' + producto.descripcion + '</td>' +
-                                        '<td align="right">' + producto.cantidad + '</td>' +
-                                        '<td align="right">&nbsp; &nbsp;&nbsp; &nbsp;' + producto.precio + '</td>'
-                                    tablaProductos.appendChild(fila)
-                                })
-                            })
-                            .catch(function (error) {
-                                console.log('Error:', error)
-                                alert('Error al obtener los productos.')
-                            })
-                    </script>     
+                    
+                    <h6 class="titulo_ppal"><br>Modo: desarrollador</h6>  
                 </div>
-                
-                <!-- modificar -->
-                <div class="product-item" category="modificar">
-                                       
-                    <script>
-                        const app = Vue.createApp({
-                            data() {
-                                return {
-                                    codigo: '',
-                                    mostrarDatosProducto: false,
-                                    descripcion: '',
-                                    cantidad: '',
-                                    precio: ''
-                                }
-                            },
-                            methods: {
-                                obtenerProducto() {
-                                    fetch(URL + 'productos/' + this.codigo)
-                                        .then(response => {
-                                            if (response.ok) {
-                                                return response.json()
-                                            } else {
-                                                throw new Error('Error al obtener los datos del producto.')
-                                            }
-                                        })
-                                        .then(data => {
-                                            this.descripcion = data.descripcion
-                                            this.cantidad = data.cantidad
-                                            this.precio = data.precio
-                                            this.mostrarDatosProducto = true
-                                        })
-                                        .catch(error => {
-                                            alert('Error al obtener los datos del producto.')
-                                        })
-                                },
-                                guardarCambios() {
-                                    const producto = {
-                                        codigo: this.codigo,
-                                        descripcion: this.descripcion,
-                                        cantidad: this.cantidad,
-                                        precio: this.precio
-                                    }
-                
-                                    fetch(URL + 'productos/' + this.codigo, {
-                                        method: 'PUT',
-                                        headers: {
-                                            'Content-Type': 'application/json'
-                                        },
-                                        body: JSON.stringify(producto)
-                                    })
-                                        .then(response => {
-                                            if (response.ok) {
-                                                return response.json()
-                                            } else {
-                                                throw new Error('Error al guardar los cambios del producto.')
-                                            }
-                                        })
-                                        .then(data => {
-                                            alert('Cambios guardados correctamente.')
-                                            location.reload()
-                                        })
-                                        .catch(error => {
-                                            alert('Error al guardar los cambios del producto.')
-                                        })
-                                }
-                            }
-                        })
-                        app.mount('#app')
-                    </script>    
-                </div>
-                
-                <!-- eliminar -->
-                
-                <!-- carrito -->
-                
             </section>  
         </div>
-       
+        <script>
+            //const URL = "http://127.0.0.1:5000/"
+            const URL = "https://23016grupo5.pythonanywhere.com/"
+
+            // Realizamos la solicitud GET al servidor para obtener todos los productos
+            fetch(URL + 'productos')
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json() // Parseamos la respuesta JSON
+                    } else {
+                        throw new Error('Error al obtener los productos.')
+                    }
+                })
+                .then(function (data) {
+                    var tablaProductos = document.getElementById('tablaProductos')
+
+                    // Iteramos sobre los productos y agregamos filas a la tabla
+                    data.forEach(function (producto) {
+                        var fila = document.createElement('tr')
+                        fila.innerHTML = '<td>' + producto.codigo + '</td>' +
+                            '<td>' + producto.descripcion + '</td>' +
+                            '<td align="right">' + producto.cantidad + '</td>' +
+                            '<td align="right">&nbsp; &nbsp;&nbsp; &nbsp;' + producto.precio + '</td>'
+                        tablaProductos.appendChild(fila)
+                    })
+                })
+                .catch(function (error) {
+                    console.log('Error:', error)
+                    alert('Error al obtener los productos.')
+                })
+        </script>       
 
         
     </main>

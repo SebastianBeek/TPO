@@ -43,7 +43,6 @@
             </ul>
         </nav>
     </header>
-    <span class="titulo_ppal"><br>Modo: desarrollador</span>
     <main class="main_productos">
         
         <div class="store-products">
@@ -54,11 +53,10 @@
                 <a href="./bajas.html" class="cat_item" category="eliminar" id="">Bajas</a>
                 <a href="./carrito.html" class="cat_item" category="carrito" id="carrito">Carrito</a>
             </div>
+
             <section class="products-list">
-                <!-- alta -->
-                
                 <div class="product-item" category="alta">
-                    <h1>Altas de Productos</h1>
+                    <h3>Altas de Productos</h3>
                     <br>
                     <form id="formulario">
                         <label for="codigo">Código:</label>
@@ -76,68 +74,60 @@
                         <button type="submit">Agregar Producto</button>
                         
                     </form>
-                    <script>
-                        const URL = "https://23016grupo5.pythonanywhere.com/"
-                        // Capturamos el evento de envío del formulario
-                        document.getElementById('formulario').addEventListener('submit', function (event) {
-                        event.preventDefault() // Evitamos que se recargue la página
-                
-                        // Obtenemos los valores del formulario
-                        var codigo = document.getElementById('codigo').value
-                        var descripcion = document.getElementById('descripcion').value
-                        var cantidad = document.getElementById('cantidad').value
-                        var precio = document.getElementById('precio').value
-                
-                        // Creamos un objeto con los datos del producto
-                        var producto = {
-                            codigo: codigo,
-                            descripcion: descripcion,
-                            cantidad: cantidad,
-                            precio: precio
-                        }
-                        console.log(producto)
-                        // Realizamos la solicitud POST al servidor
-                        fetch(URL + 'productos', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify(producto)
-                        })
-                            .then(function (response) {
-                                if (response.ok) {
-                                    return response.json() // Parseamos la respuesta JSON
-                                } else {
-                                    throw new Error('Error al agregar el producto.')
-                                }
-                            })
-                            .then(function (data) {
-                                alert('Producto agregado correctamente.')
-                                document.getElementById('codigo').value = ""
-                                document.getElementById('descripcion').value = ""
-                                document.getElementById('cantidad').value = ""
-                                document.getElementById('precio').value = ""
-                            })
-                            .catch(function (error) {
-                                console.log('Error:', error)
-                                alert('Error al agregar el producto.')
-                            })
-                        })
-                    </script>
+
+                    <h6 class="titulo_ppal"><br>Modo: desarrollador</h6>
                 </div>
-                
-                <!-- listado -->
-                                
-                <!-- modificar -->
-                
-                
-                <!-- eliminar -->
-                
-                <!-- carrito -->
-                
             </section>  
         </div>
-       
+        
+       <script>
+            const URL = "https://23016grupo5.pythonanywhere.com/"
+            // Capturamos el evento de envío del formulario
+            document.getElementById('formulario').addEventListener('submit', function (event) {
+            event.preventDefault() // Evitamos que se recargue la página
+
+            // Obtenemos los valores del formulario
+            var codigo = document.getElementById('codigo').value
+            var descripcion = document.getElementById('descripcion').value
+            var cantidad = document.getElementById('cantidad').value
+            var precio = document.getElementById('precio').value
+
+            // Creamos un objeto con los datos del producto
+            var producto = {
+                codigo: codigo,
+                descripcion: descripcion,
+                cantidad: cantidad,
+                precio: precio
+            }
+            console.log(producto)
+            // Realizamos la solicitud POST al servidor
+            fetch(URL + 'productos', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(producto)
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json() // Parseamos la respuesta JSON
+                    } else {
+                        throw new Error('Error al agregar el producto.')
+                    }
+                })
+                .then(function (data) {
+                    alert('Producto agregado correctamente.')
+                    document.getElementById('codigo').value = ""
+                    document.getElementById('descripcion').value = ""
+                    document.getElementById('cantidad').value = ""
+                    document.getElementById('precio').value = ""
+                })
+                .catch(function (error) {
+                    console.log('Error:', error)
+                    alert('Error al agregar el producto.')
+                })
+            })
+        </script>
         
     </main>
     <footer class="footer">

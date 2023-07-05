@@ -111,11 +111,14 @@ document.addEventListener('DOMContentLoaded', function () {
         let cartItemsDetail = "Detalle de su compra:\n";
         let cartTotal = 0;
 
+        cartItemsDetail += `Cód.  Descripción          Cantidad        Subtotal\n`;
+        cartItemsDetail += `------------------------------------------------------\n`;
+
         cart.forEach(function(item) {
-            cartItemsDetail += `(x${item.quantity}) ${item.id} ${item.description}  - $${item.price.toFixed(2)}\n`; 
+            cartItemsDetail += `${item.id}   ${item.description}          ${item.quantity}u               $${item.price.toFixed(2)}\n`; 
             cartTotal += item.price;
         });
-
+        cartItemsDetail += `------------------------------------------------------\n`;
         cartItemsDetail += `Total: $${cartTotal.toFixed(2)}`;
         alert(cartItemsDetail + "\n\nGracias por su compra." );
     });
@@ -128,9 +131,9 @@ document.addEventListener('DOMContentLoaded', function () {
         cart.forEach(function(item) {
             const listItem = document.createElement("li");
             listItem.innerHTML = `
-                <span>(x${item.quantity}) ${item.id} ${item.description} </span>
+                <span>${item.id} ${item.description} ${item.quantity}u</span>
                 <span>$${item.price.toFixed(2)}</span>
-                <button class="remove-btn"><b>x</b></button>
+                <button class="remove-btn"><b>Eliminar</b></button>
             `;
 
             const removeBtn = listItem.querySelector(".remove-btn");

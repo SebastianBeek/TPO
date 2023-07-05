@@ -20,7 +20,7 @@
     <!-- <script src="https://unpkg.com/vue-router@next"></script> -->
     <title>Drago&Arya</title>
     <style>
-
+      
     </style>
 </head>
 <body>
@@ -43,7 +43,6 @@
             </ul>
         </nav>
     </header>
-    <span class="titulo_ppal"><br>Modo: desarrollador</span>
     <main class="main_productos">
         
         <div class="store-products">
@@ -55,151 +54,255 @@
                 <a href="#" class="cat_item" category="carrito" id="carrito">Carrito</a>
             </div>
             <section class="products-list">
-                <!-- alta -->
-                <!-- listado -->
-                <!-- modificar -->
-                <!-- bajas -->
-                <!-- carrito -->
-                <div id="app" class="product-item">
-                    <h1>Carrito de compras</h1>
+                <div class="product-item" category="alta">
+                    <h3>Productos en el inventario:</h3>
                     <br>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Código</th>
-                          <th>Descripción</th>
-                          <th>Cantidad</th>
-                          <th>Precio</th>
-                          <th>Carrito</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr v-for="producto in productos" :key="producto.codigo">
-                          <td>{{ producto.codigo }}</td>
-                          <td>{{ producto.descripcion }}</td>
-                          <td align="right">{{ producto.cantidad }}</td>
-                          <td align="right">&nbsp; &nbsp; {{ producto.precio }}</td>
-                          <td>
-                            <button @click="agregarAlCarrito(producto)">&nbsp;&nbsp;<b>+</b>&nbsp;&nbsp;</button>
-                            <button @click="restarDelCarrito(producto)">&nbsp;&nbsp;<b>-</b>&nbsp;&nbsp;</button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                
-                    <div v-if="mostrarCarrito">
-                      <h3>Productos en el carrito:</h3>
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Código</th>
-                            <th>Descripción</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr v-for="item in carrito" :key="item.codigo">
-                            <td>{{ item.codigo }}</td>
-                            <td>{{ item.descripcion }}</td>
-                            <td align="right">{{ item.cantidad }}</td>
-                            <td align="right">&nbsp; &nbsp; {{ item.precio }}</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                
-                    <div v-if="!mostrarCarrito" class="contenedor-centrado">
-                      <button @click="obtenerCarrito">Mostrar carrito</button>
-                    </div>
-                
-                    
-                
-                  </div>
-                
-                  <script>
-                    //const URL = "http://127.0.0.1:5000/"
-                    const URL = "https://23016grupo5.pythonanywhere.com/"
-                
-                    const app = Vue.createApp({
-                      data() {
-                        return {
-                          productos: [],
-                          mostrarCarrito: false,
-                          carrito: [],
-                        }
-                      },
-                      created() {
-                        this.obtenerProductos()
-                      },
-                      methods: {
-                        obtenerProductos() {
-                          fetch(URL + 'productos')
-                            .then(response => response.json())
-                            .then(data => {
-                              this.productos = data
-                            })
-                            .catch(error => {
-                              console.error(URL + 'productos', error)
-                              alert('Error al obtener los productos.')
-                            })
-                        },
-                        agregarAlCarrito(producto) {
-                          fetch(URL + 'carrito', {
-                            method: 'POST',
-                            headers: {
-                              'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                              codigo: producto.codigo,
-                              cantidad: 1, // Agregamos una unidad al carrito
-                            }),
-                          })
-                            .then(response => response.json())
-                            .then(data => {
-                              alert(data.message)
-                            })
-                            .catch(error => {
-                              console.error('Error al agregar el producto al carrito:', error)
-                              alert('Error al agregar el producto al carrito.')
-                            })
-                        },
-                        restarDelCarrito(producto) {
-                          fetch(URL + 'carrito', {
-                            method: 'DELETE',
-                            headers: {
-                              'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                              codigo: producto.codigo,
-                              cantidad: 1, // Restamos una unidad del carrito
-                            }),
-                          })
-                            .then(response => response.json())
-                            .then(data => {
-                              alert(data.message)
-                            })
-                            .catch(error => {
-                              console.error('Error al restar el producto del carrito:', error)
-                              alert('Error al restar el producto del carrito.')
-                            })
-                        },
-                        obtenerCarrito() {
-                          fetch(URL + 'carrito')
-                            .then(response => response.json())
-                            .then(data => {
-                              this.carrito = data
-                              this.mostrarCarrito = true
-                            })
-                            .catch(error => {
-                              console.error('Error al obtener el carrito:', error)
-                              alert('Error al obtener el carrito.')
-                            })
-                        },
-                      },
+                    <div id="app">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th align="center">Código</th>
+                                    <th align="left">Descripción</th>
+                                    <th align="center">Cantidad</th>
+                                    <th align="right">Precio</th>
+                                    <th align="center">Carrito</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="producto in productos" :key="producto.codigo">
+                                    <td align="center">{{ producto.codigo }}</td>
+                                    <td align="left">{{ producto.descripcion }}</td>
+                                    <td align="center">{{ producto.cantidad }}</td>
+                                    <td align="right">&nbsp; &nbsp; {{ producto.precio }}</td>
+                                    <td>
+                                        <button class="addbutton" @click="agregarAlCarrito(producto)">&nbsp;<b>+</b>&nbsp;</button>&nbsp;
+                                        <button class="quitbutton" @click="restarDelCarrito(producto)">&nbsp;<b>-</b>&nbsp;</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div v-if="mostrarCarrito || carrito.length > 0">
+                            <h3>Productos en el carrito:</h3>
+                            <br>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th align="center">Código</th>
+                                        <th align="left">Descripción</th>
+                                        <th align="center">Cantidad</th>
+                                        <th align="right">Precio</th>
+                                        <th align="right">Sub-Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="item in carrito" :key="item.codigo">
+                                        <td>{{ item.codigo }}</td>
+                                        <td align="left">{{ item.descripcion }}</td>
+                                        <td align="center">{{ item.cantidad }}</td>
+                                        <td align="right">&nbsp; &nbsp; {{ item.precio }}</td>
+                                        <td align="right">&nbsp; &nbsp; {{ calcularTotal(item) }}</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="4" style="text-align:right">Total:</th>
+                                        <th align="right">&nbsp; &nbsp; {{ calcularTotalCarrito() }}</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="botones-carrito">
+                                        <button class="button" @click="vaciarCarrito">Vaciar Carrito</button>&nbsp;
+                                        <button class="button" @click="mostrarRecibo">Ir a Pagar</button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div><h6 class="titulo_ppal"><br>Modo: desarrollador</h6>
+                </div>
+            </section>
+        </div>
+            
+              
+        <script>
+            // const URL = "http://127.0.0.1:5000/"
+        const URL = "https://23016grupo5.pythonanywhere.com/"
+
+        const app = Vue.createApp({
+            data() {
+            return {
+                productos: [],
+                mostrarCarrito: true,
+                carrito: [],
+            }
+            },
+            created() {
+            this.obtenerProductos()
+            this.obtenerCarrito()
+            
+            // Establecer un temporizador para actualizar los datos cada cierto intervalo
+            setInterval(() => {
+                this.obtenerProductos()
+                this.obtenerCarrito()
+            }, 5000) // Actualizar cada 5 segundos (ajusta el intervalo según tus necesidades)
+            },
+            methods: {
+            obtenerProductos() {
+                fetch(URL + 'productos')
+                .then(response => response.json())
+                .then(data => {
+                    this.productos = data
+                })
+                .catch(error => {
+                    console.error(URL + 'productos', error)
+                    alert('Error al obtener los productos.')
+                })
+            },
+            agregarAlCarrito(producto) {
+                if (producto.cantidad > 0) {
+                fetch(URL + 'carrito', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                    codigo: producto.codigo,
+                    cantidad: 1, // Agregamos una unidad al carrito
+                    }),
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                    if (data.success) {
+                        producto.cantidad--;
+                        alert(data.message);
+                        this.obtenerProductos(); // Actualizar los datos de los productos
+                        this.obtenerCarrito(); // Actualizar los datos del carrito
+                    } else {
+                        alert(data.message);
+                    }
                     })
-                    app.mount('#app')
-                  </script>
+                    .catch(error => {
+                    console.error('Error al agregar el producto al carrito:', error)
+                    alert('Error al agregar el producto al carrito.')
+                    })
+                } else {
+                alert('No hay stock disponible de este producto.')
+                }
+            },
+            restarDelCarrito(producto) {
+                fetch(URL + 'carrito', {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    codigo: producto.codigo,
+                    cantidad: 1, // Restamos una unidad del carrito
+                }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                    producto.cantidad++;
+                    alert(data.message);
+                    this.obtenerProductos(); // Actualizar los datos de los productos
+                    this.obtenerCarrito(); // Actualizar los datos del carrito
+                    } else {
+                    alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al restar el producto del carrito:', error)
+                    alert('Error al restar el producto del carrito.')
+                })
+            },
+            vaciarCarrito() {
+                Promise.all(
+                this.carrito.map(item =>
+                    fetch(URL + 'carrito', {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        codigo: item.codigo,
+                        cantidad: item.cantidad,
+                    }),
+                    })
+                )
+                )
+                .then(responses => Promise.all(responses.map(response => response.json())))
+                .then(dataArray => {
+                    const success = dataArray.every(data => data.success);
+                    if (success) {
+                    alert('Se ha vaciado el carrito correctamente.');
+                    this.obtenerProductos(); // Actualizar los datos de los productos
+                    this.obtenerCarrito(); // Actualizar los datos del carrito
+                    } else {
+                    alert('Se ha vaciado el carrito correctamente.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al vaciar el carrito:', error);
+                    alert('Error al vaciar el carrito.');
+                });
+            },
+            obtenerCarrito() {
+                fetch(URL + 'carrito')
+                .then(response => response.json())
+                .then(data => {
+                    this.carrito = data
+                })
+                .catch(error => {
+                    console.error('Error al obtener el carrito:', error)
+                    alert('Error al obtener el carrito.')
+                })
+            },
+            calcularTotal(producto) {
+                return (producto.cantidad * producto.precio).toFixed(2)
+            },
+            calcularTotalCarrito() {
+                let totalCarrito = 0
+                for (const item of this.carrito) {
+                totalCarrito += item.cantidad * item.precio
+                }
+                return totalCarrito.toFixed(2)
+            },
+            mostrarRecibo() {
+                if (this.carrito.length === 0) {
+                alert("No hay productos en el carrito");
+                return;
+            }
+            // Crear el contenido del recibo
+            let recibo = "Recibo de Compra:\n";
+            let totalCarrito = 0;
+
+            recibo += "Cód.  Descripción               Cantidad   P. Unitario  Subtotal\n";
+            recibo += "-----------------------------------------------------------------\n";
+            
+            this.carrito.forEach((item, index) => {
+                // Separar las descripciones en columnas
+                let codigoColumna = item.codigo + " ".repeat(6 - item.codigo.length);
+                let descripcionColumna = item.descripcion + " ".repeat(Math.max(0, 20 - item.descripcion.length));
+                let cantidadColumna = item.cantidad + " ".repeat(9 - item.cantidad.toString().length);
+                let codigoPrecio = item.precio + " ".repeat(6 - item.codigo.length);
+                let subtotalColumna = (item.cantidad * item.precio).toFixed(2) + " ".repeat(9);
+
+                recibo += ` ${codigoColumna}      ${descripcionColumna}         ${cantidadColumna}     ${codigoPrecio}          ${subtotalColumna}\n`;
+
+                totalCarrito += item.cantidad * item.precio;
+            });
+
+            recibo += "-----------------------------------------------------------------\n";
+            recibo += `Total a pagar: ${totalCarrito.toFixed(2)}`;
+
+            // Mostrar la alerta con el recibo
+            alert(recibo + "\n\nGracias por su compra.");
+            }
+            ,
+            },
+        })
+        app.mount('#app')
+        </script>
        
 
         
