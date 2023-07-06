@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet" />
     <!-- Enlace al JavaScript-->
-    <script defer src="/js/desarrollador.js"></script>
+    <script defer src="/js/index.js"></script>
     <script src="https://unpkg.com/vue@next"></script>
     <!-- <script src="https://unpkg.com/vue-router@next"></script> -->
     <title>Drago&Arya</title>
@@ -56,27 +56,27 @@
 
             <section class="products-list">
                 <div class="product-item" category="alta">
-                    <h3>Altas de Productos</h3>
-                    <br>
-                    <form id="formulario">
-                        <label for="codigo">Código:</label>
-                        <input type="text" id="codigo" name="codigo" required><br>
-                
-                        <label for="descripcion">Descripción:</label>
-                        <input type="text" id="descripcion" name="descripcion" required><br>
-                
-                        <label for="cantidad">Cantidad:</label>
-                        <input type="number" id="cantidad" name="cantidad" required><br>
-                
-                        <label for="precio">Precio:</label>
-                        <input type="number" step="0.01" id="precio" name="precio" required><br>
-                
-                        <button type="submit">Agregar Producto</button>
-                        
-                    </form>
-
-                    <h6 class="titulo_ppal"><br>Modo: desarrollador</h6>
-                </div>
+                    <div>
+                        <h3>Altas de Productos</h3>
+                        <br>
+                        <form id="formulario">
+                            <label for="codigo">Código:</label>
+                            <input type="text" id="codigo" name="codigo" required><br>
+                    
+                            <label for="descripcion">Descripción:</label>
+                            <input type="text" id="descripcion" name="descripcion" required><br>
+                    
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" name="cantidad" required><br>
+                    
+                            <label for="precio">Precio:</label>
+                            <input type="number" step="0.01" id="precio" name="precio" required><br>
+                    
+                            <button type="submit">Agregar Producto</button>
+                            
+                        </form>
+                    </div>
+                </div><h6 class="titulo_ppal"><br>Modo: desarrollador</h6>
             </section>  
         </div>
         
@@ -162,7 +162,6 @@
     <script>
         
     </script>
-     
 </body>
 
 </html>

@@ -6,9 +6,9 @@
     font-family: "Fira Sans Condensed", sans-serif;
 }
 body {
-    margin-top: 80px;
+    margin-top: 120px;
     position: relative;
-    padding-bottom: 210px;
+    padding-bottom: 180px;
     min-height: 100vh; /* No tocar, sirve para anclar el footer*/
 }
 /*CSS DEL HEADER*/
@@ -89,26 +89,33 @@ body {
 
 /*////////////////////// PAG PRODUCTOS/////////////////////*/
 .main_productos {
-    margin-top: 80px;
+    display: flex;
+    justify-content: center;
     padding: 30px 50px 0px 30px; /*ARRIBA DERECHA ABAJO y IZQUIERDA*/
 }
 .store-products {
     display: grid;
-    grid-template-columns: 200px 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 180px 1fr 1fr;
 }
 .categories {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
+    display: block;
+    width: 90%;
+    padding: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer; /*lo agregue para que cambie a cursor en vez de patita*/
 }
-.categories .category_item {
+.category_item {
     display: block;
     width: 90%;
     padding: 5px 0;
     margin-bottom: 20px;
     background: rgb(202, 162, 239);
-    border-radius: 35px;
+    border-radius: 25px;
     text-align: center;
     text-decoration: none;
     color: white;
@@ -121,23 +128,31 @@ body {
 }
 /*products-combos*/
 .products-list {
+    position: relative;
     width: 100%;
     grid-column: 2/4;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
+
 }
-.products-list .product-item {
-    width: 40%;
+.product-item {
+    width: 22%;
+    height: 45%;
     margin-left: 3%;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     box-shadow: 0px 0px 6px 0px rgb(0, 0, 0, 0.22);
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    /* background-color: rgb(202, 162, 239); */
+
 }
 .products-list .product-item img {
     width: 100%;
+
 }
 /* flip-card */
 .products-list .product-item a {
@@ -146,9 +161,10 @@ body {
     padding: 8px 0;
     background: rgb(248, 228, 17);
     border-radius: 20px;
-    height: 45px;
+    height: 40px;
     color: black;
     text-align: center;
+    
     text-decoration: none;
 }
 .cardBox {
@@ -158,7 +174,7 @@ body {
     justify-content: center;
     display: block;
     width: 100%;
-    padding: 8px 0;
+    padding: 0;
     height: 75px;
 }
 .cardBox:hover .card {
@@ -183,7 +199,10 @@ body {
 .front {
     width: 100%;
     font-size: 20px;
-    margin-top: 15px;
+}
+.front-description{
+    padding-top: 10px;
+    font-size: 16px;
 }
 .back {
     transform: rotateY(180deg);
@@ -252,20 +271,21 @@ main {
 
 #floating-cart {
     position: fixed; 
-    bottom: 200px;
-    left: 40px;
-    width: 310px;
+    bottom: 0px;
+    left: 50%;
+    width: 350px;
     background-color: lightyellow;
     border: 1px solid #ccc;
     padding: 10px;
     display: none; /* Inicialmente oculto */
+    z-index: 9999;
     
 }
 
 #floating-cart h2{
     color: rgb(146, 87, 158);
-    text-align: center;
-    font-size: 20px;
+    text-align: left;
+    font-size: 18px;
     
 }
 
@@ -407,9 +427,14 @@ footer {
 
 /*QUERY MODO SMARTPHONE*/
 @media (max-width: 768px) {
+    .main_productos {
+        margin-top: 80px;
+       
+    }
     .header {
         height: 60px;
         flex-wrap: wrap;
+        z-index: 99;
     }
     .logo {
         padding: 0px 20px;
@@ -452,16 +477,17 @@ footer {
         color: rgb(202, 162, 239);
     }
     .nav-toggle {
+        position:relative;
         display: block;
         cursor: pointer;
+        z-index: 9999;
     }
     .nav-menu-visible {
         left: 0;
     }
     body {
-        margin-top: 50px;
+        margin-top: 70px;
         position: relative;
-        padding-bottom: 150px;
         font-size: 14px;
     }
     .texto {
@@ -469,34 +495,64 @@ footer {
     }
     /* products */
     .main_productos {
-        margin-top: 60px;
-        margin-bottom: 30px;
-        padding: 40px 5% 0;
+        flex-direction: column;
+        
     }
     .store-products {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        margin-top: 40px;
+        margin-left: 0;
+        display: inline-block;
+        
+        
+        
     }
-    .categories .category_item {
-        width: 110%;
-        text-align: center;
-        height: 30px;
-        font-size: 12px;
+    /* Categories */
+    .categories {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        height: auto;
+        overflow-y: auto;
+        font-size: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        align-items: center;
+        background-color: rgb(202, 162, 239);
+        z-index: 1;
     }
-    /* flip-card */
+
+    .category_item {
+        font-size: 15px;
+        width: 20%;
+        margin: 5px;
+        background-color: rgb(248, 228, 17);
+
+    }
+
     .products-list {
-        grid-column: 2/4;
+        margin-top:26px;
+        width: 100%;
+        
+        /* background-color: rgb(248, 228, 17); */
+        
     }
     
-    .products-list .product-item a {
-        height: 30px;
-        padding-top: 2px;
+    /* Product Item */
+    .product-item {
+        margin-top: 40px;
+        width: 100%;
+        padding: 0;
+        /* background-color: rgb(248, 228, 17); */
+        
     }
     .cardBox {
         height:0px;
     }
     .front {
-        font-size: 18px;
+        font-size: 16px;
     }
     .back {
         font-size: 10px;
@@ -504,6 +560,13 @@ footer {
     .price {
         font-size: 10px;
     }
+    #floating-cart {
+        left: 20%;
+        padding: 10px;
+        
+    }
+    
+    
     /* ------------ */
     footer {
         height: 160px;
@@ -532,11 +595,7 @@ footer {
         font-size: 12px;
     }
     /* products */
-    .categories {
-        margin: 0;
-        padding: 0;
-        width: fit-content;
-    }
+    
     
     /* flip-card */
 
@@ -549,7 +608,7 @@ footer {
         height: 0px;
     }
     .front {
-        font-size: 12px;
+        font-size: 16px;
         text-align: center;
     }
     .back {

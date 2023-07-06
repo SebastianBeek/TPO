@@ -55,31 +55,31 @@
             </div>
             <section class="products-list">
                 <div class="product-item" category="eliminar">
-                    <h3>Baja de Productos</h3>
-                    <br>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Código</th>
-                                <th>Descripción</th>
-                                <th>Cantidad</th>
-                                <th align="right">Precio</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="producto in productos">
-                                <td>{{ producto.codigo }}</td>
-                                <td>{{ producto.descripcion }}</td>
-                                <td align="right">{{ producto.cantidad }}</td>
-                                <td align="right">{{ producto.precio }}</td>
-                                <td><button @click="eliminarProducto(producto.codigo)">Eliminar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div>
+                        <h3>Baja de Productos</h3>
+                        <br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Descripción</th>
+                                    <th>Cantidad</th>
+                                    <th align="right">Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="producto in productos">
+                                    <td>{{ producto.codigo }}</td>
+                                    <td>{{ producto.descripcion }}</td>
+                                    <td align="right">{{ producto.cantidad }}</td>
+                                    <td align="right">{{ producto.precio }}</td>
+                                    <td><button @click="eliminarProducto(producto.codigo)">Dar baja</button>
+                            </tbody>
+                        </table>
 
-                    <h6 class="titulo_ppal"><br>Modo: desarrollador</h6>
-                </div>
+                    </div>
+                </div><h6 class="titulo_ppal"><br>Modo: desarrollador</h6>
             </section> 
         </div>
 
@@ -141,6 +141,7 @@
 
 
     </main>
+
     <footer class="footer">
         <!-- Frase icónica -->
         <div class="footer-texto">
@@ -173,7 +174,6 @@
     <script>
         
     </script>
-    <script src="../js/desarrollador.js"></script> 
 </body>
 
 </html>

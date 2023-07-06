@@ -27,7 +27,7 @@
                     <img class="logo2 animate__animated animate__backInLeft" src="../img/logo_nombre.png" alt="nombre">
                 </div>
                 <!-- Boton del menu desplegable para smartphone -->
-                <button class="nav-toggle animate__bounceIn fa-solid fa-bone"></button>
+                <button class="nav-toggle animate__bounceIn fa-solid fa-bone" class="menu-emergente" id="menu-emergente"></button>
                 <!-- Menu principal -->
                 <ul class="nav-menu nav-menu_visible">
                     <li class="nav-menu-item animate__bounceIn "><a href="../index.html" class="nav-menu-link nav-link"><b>INICIO</b></a></li>
@@ -40,15 +40,16 @@
         </header>
         <main class="main_productos">
             <div class="store-products">
-                <div class="categories">
-                    <a href="#" class="category_item" category="combos" id="combos">Combos</a>
-                    <a href="#" class="category_item" category="dispensadores" id="dispensadores">Dispensadores</a>
+                <div class="categories" id="menu-btn">
+                    <a href="#" class="category_item" category="olfativas" id="olfativas">Olfativas</a>
+                    <a href="#" class="category_item" category="dispensadores" id="dispensadores">Dispenser</a>
                     <a href="#" class="category_item" category="gatos" id="gatos">Gatos</a>
                     <a href="#" class="category_item" category="lametonas" id="lametonas">Lametonas</a>
                     <a href="#" class="category_item" category="mordedores" id="mordedores">Mordedores</a>
-                    <a href="#" class="category_item" category="olfativas" id="olfativas">Olfativas</a>
                     <a href="#" class="category_item" category="paseo" id="paseo">Paseo</a>
                     <a href="#" class="category_item" category="sogas" id="sogas">Sogas</a>
+                    <a href="#" class="category_item" category="combos" id="combos">Combos</a>
+
                 </div>
                 <section class="products-list">
                     <!-- Combos -->
@@ -58,11 +59,14 @@
                             <div class="card"> 
                                 <div class="front"> 
                                     <a href="#">Combo Plaza</a>
+                                    <div class="front-description">
+                                        <p>Soga flex 70cm, Triflex gruesa, Snack de higado o corazón, Plato plegable grande</p>
+                                    </div>
                                 </div>
                                 <div class="back"> 
                                     <div class=""> 
                                         <div class="product">
-                                            <h4>C01</h4>
+                                            <h4>Cód.01</h4>
                                             <p>Combo plaza</p>
                                             <p>Cantidad:
                                                 <select class="quantity">
@@ -91,11 +95,14 @@
                             <div class="card"> 
                                 <div class="front"> 
                                     <a href="#">Combo Mordida</a>
+                                    <div class="front-description">
+                                        <p>Soga de 30cm reforzada, Hueso de fibras naturales, Hueso natural, Pelota dispensadora</p>
+                                    </div>
                                 </div>
                                 <div class="back"> 
                                     <div class=""> 
                                         <div class="product">
-                                            <h4>C02</h4>
+                                            <h4>Cód.02</h4>
                                             <p>Combo Mordida</p>
                                             <p>Cantidad:
                                                 <select class="quantity">
@@ -124,11 +131,14 @@
                             <div class="card"> 
                                 <div class="front">
                                     <a href="#">Combo Portatil</a>
+                                    <div class="front-description">
+                                        <p>Alfombra portátil: chica o grande junto con unos snacks de Hígado/Corazón.</p>
+                                    </div>
                                 </div>
                                 <div class="back"> 
                                     <div class=""> 
                                         <div class="product">
-                                            <h4>C03</h4>
+                                            <h4>Cód.03</h4>
                                             <p>Combo portatil</p>
                                             <p>Cantidad:
                                                 <select class="quantity">
@@ -157,11 +167,18 @@
                             <div class="card"> 
                                 <div class="front">
                                     <a href="#">Combo Snacks</a>
+                                    <div class="front-description">
+                                        <p>Combo ideal para perros chicos: 1 Alfombra 10x30
+
+                                            1 paquete de Higado/Corazón 100gr
+                                            
+                                            1 soga multiflex 20cm</p>
+                                    </div>
                                 </div>
                                 <div class="back"> 
                                     <div class=""> 
                                         <div class="product">
-                                            <h4>C04</h4>
+                                            <h4>Cód.04</h4>
                                             <p>Combo Snacks</p>
                                             <p>Cantidad:
                                                 <select class="quantity">
@@ -196,11 +213,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Dispensador Aro</a>
+                                        <div class="front-description">
+                                            <p>Rellenable, Lavable y especial para congelar, Tamaño: 15,7x3cm</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>D01</h4>
+                                                <h4>Cód.05</h4>
                                                 <p>Dispensador Aro</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -235,11 +255,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Dispensador Bolas</a>
+                                        <div class="front-description">
+                                            <p>Es un juguete de bocados que entretiene y mantiene a los perros ocupados mientras comen</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>D02</h4>
+                                                <h4>Cód.06</h4>
                                                 <p>Dispensador Bolas</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -266,8 +289,8 @@
                     <!-- Gatos -->
                     <div class="slider product-item" category="gatos">
                         <div class=" item"> 
-                            <img id="1" src="../img/Gatos/autocepillo1.png" alt="" class="img">
-                            <img id="2" src="../img/Gatos/autocepillo2.png" alt="" class="img">
+                            <img id="1" src="../img/Gatos/autocepillo2.png" alt="" class="img">
+                            <img id="2" src="../img/Gatos/autocepillo1.png" alt="" class="img">
                             <img id="3" src="../img/Gatos/autocepillo3.png" alt="" class="img">
                         </div>
                         <ul class="footer-slider">
@@ -275,11 +298,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Autocepillo</a>
+                                        <div class="front-description">
+                                            <p>Se coloca en una esquina y con un poco de hierba gatera mira lo que pasa.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>G01</h4>
+                                                <h4>Cód.07</h4>
                                                 <p>Autocepillo</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -305,20 +331,23 @@
                     </div>
                     <div class="slider product-item" category="gatos">
                         <div class=" item"> 
-                            <img id="1" src="../img/Gatos/transportadora1.png" alt="" class="img">
+                            <img id="1" src="../img/Gatos/transportadora3.png" alt="" class="img">
                             <img id="2" src="../img/Gatos/transportadora2.png" alt="" class="img">
-                            <img id="3" src="../img/Gatos/transportadora3.png" alt="" class="img">
+                            <img id="3" src="../img/Gatos/transportadora1.png" alt="" class="img">
                         </div>
                         <ul class="footer-slider">
                             <div class="cardBox">
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Transportadora</a>
+                                        <div class="front-description">
+                                            <p>Mochila transportadora, Diseño práctico y sofisticado, Producto 100% IMPORTADO</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>G02</h4>
+                                                <h4>Cód.08</h4>
                                                 <p>Transportadora</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -353,11 +382,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Piedras Aglomerantes</a>
+                                        <div class="front-description">
+                                            <p>5 kilos de las mejores piedras para gato!</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>G03</h4>
+                                                <h4>Cód.09</h4>
                                                 <p>Piedras Aglomerantes</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -392,11 +424,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Pretal Alitas</a>
+                                        <div class="front-description">
+                                            <p>Pretal para gatos con correa de 1.20MTS., se regula de 20 A 34cm</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>G04</h4>
+                                                <h4>Cód.10</h4>
                                                 <p>Pretal Alitas</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -432,11 +467,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Lametona con sopapa</a>
+                                        <div class="front-description">
+                                            <p>Tiene sopapas para pegarlo en la pared, ideal para la hora del baño o al momento de poner pipeta.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>L01</h4>
+                                                <h4>Cód.11</h4>
                                                 <p>Lametona con sopapa</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -470,11 +508,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Lametona pez</a>
+                                        <div class="front-description">
+                                            <p>Es de silicona, un material lavable, congelable, no tóxico. MEDIDAS: 24.5*19*0.8cm sin sopapa.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>L02</h4>
+                                                <h4>Cód.12</h4>
                                                 <p>Lametona pez</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -507,11 +548,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Mordillo</a>
+                                        <div class="front-description">
+                                            <p>Se le puede untar pastita y llevar al frizzer para más diversión. Materia:silicona. Tamaño: alto 17cm</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>L03</h4>
+                                                <h4>Cód.13</h4>
                                                 <p>Mordillo</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -546,11 +590,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Frisbee</a>
+                                        <div class="front-description">
+                                            <p>>Material: silicona flexible. Liviano, recomendado para perros de razas pequeñas y medianas.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>M01</h4>
+                                                <h4>Cód.14</h4>
                                                 <p>Frisbee</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -585,11 +632,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Patita de pollo</a>
+                                        <div class="front-description">
+                                            <p>Es un buen juguete para mordedores primerizos</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>M02</h4>
+                                                <h4>Cód.15</h4>
                                                 <p>Patita de pollo</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -624,11 +674,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Pelota de pinchos</a>
+                                        <div class="front-description">
+                                            <p>Pelota TPR con chifle único color. Material resistente</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>M03</h4>
+                                                <h4>Cód.16</h4>
                                                 <p>Pelota de pinchos</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -654,8 +707,8 @@
                     </div>
                     <div class="slider product-item" category="mordedores">
                         <div class=" item"> 
-                            <img id="1" src="../img/Mordedores/xfoam_ball3.png" alt="" class="img">
-                            <img id="2" src="../img/Mordedores/xfoam_ball2.png" alt="" class="img">
+                            <img id="1" src="../img/Mordedores/xfoam_ball2.png" alt="" class="img">
+                            <img id="2" src="../img/Mordedores/xfoam_ball3.png" alt="" class="img">
                             <img id="3" src="../img/Mordedores/xfoam_ball4.png" alt="" class="img">  
                         </div>
                         <ul class="footer-slider">
@@ -663,11 +716,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Pelota Foam</a>
+                                        <div class="front-description">
+                                            <p>Ideal para el agua, buen rebote. Marca skipdwg. Tamaño 6cm.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>M04</h4>
+                                                <h4>Cód.17</h4>
                                                 <p>Pelota Foam</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -694,8 +750,8 @@
                     <!-- Olfativas -->
                     <div class="slider product-item" category="olfativas">
                         <div class=" item"> 
-                            <img id="1" src="../img/Olfativas/20210823_112936_0000.jpg" alt="" class="img">
-                            <img id="2" src="../img/Olfativas/20210823_111524_0000.jpg" alt="" class="img">
+                            <img id="1" src="../img/Olfativas/20210823_111524_0000.jpg" alt="" class="img">
+                            <img id="2" src="../img/Olfativas/20210823_112936_0000.jpg" alt="" class="img">
                             <img id="3" src="../img/Olfativas/20210823_111644_0000.jpg" alt="" class="img">  
                         </div>
                         <ul class="footer-slider">
@@ -703,11 +759,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Alfombra de Palta</a>
+                                        <div class="front-description">
+                                            <p>Tiene 4 capas para esconder comida y en el centro su semilla que también sirve como para buscar.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>O01</h4>
+                                                <h4>Cód.18</h4>
                                                 <p>Alfombra de Palta</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -743,11 +802,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Alfombra Girasol</a>
+                                        <div class="front-description">
+                                            <p>Esta hermosa alfombra primaveral tiene 2 texturas diferentes para esconder.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>O02</h4>
+                                                <h4>Cód.19</h4>
                                                 <p>Alfombra Girasol</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -782,11 +844,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Alfombra Taco Pet</a>
+                                        <div class="front-description">
+                                            <p>Un nuevo juego olfativo nivel 2 en forma de Taco. El perro tiene que meter su hocico en cada agujero y buscar.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>O03</h4>
+                                                <h4>Cód.20</h4>
                                                 <p>Alfombra Taco Pet</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -812,8 +877,8 @@
                     </div>
                     <div class="slider product-item" category="olfativas">
                         <div class=" item"> 
-                            <img id="1" src="../img/Olfativas/alfombra4.png" alt="" class="img">
-                            <img id="2" src="../img/Olfativas/alfombra2.jpg" alt="" class="img">
+                            <img id="1" src="../img/Olfativas/alfombra2.jpg" alt="" class="img">
+                            <img id="2" src="../img/Olfativas/alfombra4.png" alt="" class="img">
                             <img id="3" src="../img/Olfativas/alfombra10x301.png" alt="" class="img">  
                         </div>
                         <ul class="footer-slider">
@@ -821,11 +886,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Alfombra clásica</a>
+                                        <div class="front-description">
+                                            <p>¡Uno de los mejores juegos interactivos que estimula el olfato!Tamaño: 30x30 - Colores Aleatorios.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>O04</h4>
+                                                <h4>Cód.21</h4>
                                                 <p>Alfombra clásica</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -861,11 +929,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Plato plegable</a>
+                                        <div class="front-description">
+                                            <p>Especial para viaje y paseos. Con gancho para agarre.Material: Silicona. Medida: chico.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>P01</h4>
+                                                <h4>Cód.22</h4>
                                                 <p>Plato plegable</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -891,8 +962,8 @@
                     </div>
                     <div class="slider product-item" category="paseo">
                         <div class=" item"> 
-                            <img id="1" src="../img/Paseo/pretal_antitirones2.png" alt="" class="img">
-                            <img id="2" src="../img/Paseo/pretal_antitirones3.png" alt="" class="img">
+                            <img id="1" src="../img/Paseo/pretal_antitirones3.png" alt="" class="img">
+                            <img id="2" src="../img/Paseo/pretal_antitirones2.png" alt="" class="img">
                             <img id="3" src="../img/Paseo/pretal_antitirones4.png" alt="" class="img">  
                         </div>
                         <ul class="footer-slider">
@@ -900,11 +971,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Arnés anti-tirones</a>
+                                        <div class="front-description">
+                                            <p>Pretal Sensible Anti-Tirones para RAZAS FUERTES mejorara el paseo con tu perro.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>P02</h4>
+                                                <h4>Cód.23</h4>
                                                 <p>Arnés anti-tirones</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -930,20 +1004,23 @@
                     </div>
                     <div class="slider product-item" category="paseo">
                         <div class=" item"> 
-                            <img id="1" src="../img/Paseo/correa_larga_15mm3.png" alt="" class="img">
+                            <img id="1" src="../img/Paseo/correa_larga_20mm2.png" alt="" class="img">
                             <img id="2" src="../img/Paseo/correa_larga_20mm1.png" alt="" class="img">
-                            <img id="3" src="../img/Paseo/correa_larga_20mm2.png" alt="" class="img">  
+                            <img id="3" src="../img/Paseo/correa_larga_15mm3.png" alt="" class="img">  
                         </div>
                         <ul class="footer-slider">
                             <div class="cardBox">
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Correa Larga</a>
+                                        <div class="front-description">
+                                            <p>Ideal para cachorros o razas chicas en sus primeros paseos.El largo ideal para pasear es de 3 metros.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>P03</h4>
+                                                <h4>Cód.24</h4>
                                                 <p>Correa Larga</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -970,20 +1047,23 @@
                     <!-- Sogas -->
                     <div class="slider product-item" category="sogas">
                         <div class=" item"> 
-                            <img id="1" src="../img/Sogas/20230331_172537_0000.png" alt="" class="img">
-                            <img id="2" src="../img/Sogas/DyA (7 de 15).jpg" alt="" class="img">
-                            <img id="3" src="../img/Sogas/png_20230331_172749_0000.png" alt="" class="img">  
+                            <img id="1" src="../img/Sogas/png_20230331_172749_0000.png" alt="" class="img">
+                            <img id="2" src="../img/Sogas/20230331_172537_0000.png" alt="" class="img">
+                            <img id="3" src="../img/Sogas/DyA (7 de 15).jpg" alt="" class="img">  
                         </div>
                         <ul class="footer-slider">
                             <div class="cardBox">
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Soga Zanahoria</a>
+                                        <div class="front-description">
+                                            <p>Una soga es lo mejor para crear un vínculo con tu perro a través del juego. En forma de zanahoria. Tamaño 20cm.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>S01</h4>
+                                                <h4>Cód.25</h4>
                                                 <p>Soga Zanahoria</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -1009,20 +1089,23 @@
                     </div>
                     <div class="slider product-item" category="sogas">
                         <div class=" item"> 
-                            <img id="1" src="../img/Sogas/DSC_1838.jpg" alt="" class="img">
+                            <img id="1" src="../img/Sogas/3sogaball2.png" alt="" class="img">
                             <img id="2" src="../img/Sogas/3sogat1.png" alt="" class="img">
-                            <img id="3" src="../img/Sogas/3sogaball2.png" alt="" class="img">  
+                            <img id="3" src="../img/Sogas/DSC_1838.jpg" alt="" class="img">  
                         </div>
                         <ul class="footer-slider">
                             <div class="cardBox">
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Soga shark</a>
+                                        <div class="front-description">
+                                            <p>Soga con pelota de 5cm. Mide 50cm de largo. Tiene una shark en la punta que le podes poner comida</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>S02</h4>
+                                                <h4>Cód.26</h4>
                                                 <p>Soga shark</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
@@ -1048,8 +1131,8 @@
                     </div>
                     <div class="slider product-item" category="sogas">
                         <div class=" item"> 
-                            <img id="1" src="../img/Sogas/3manijaflex2.png" alt="" class="img">
-                            <img id="2" src="../img/Sogas/Drago_Arya_prueba.jpg" alt="" class="img">
+                            <img id="1" src="../img/Sogas/Drago_Arya_prueba.jpg" alt="" class="img">
+                            <img id="2" src="../img/Sogas/3manijaflex2.png" alt="" class="img">
                             <img id="3" src="../img/Sogas/3sogamultiflex1.png" alt="" class="img">  
                         </div>
                         <ul class="footer-slider">
@@ -1057,11 +1140,14 @@
                                 <div class="card"> 
                                     <div class="front">
                                         <a href="#">Soga Multiflex</a>
+                                        <div class="front-description">
+                                            <p>Especial para cachorro, perros medianos y para jugar entre dos perros.</p>
+                                        </div>
                                     </div>
                                     <div class="back">
                                         <div class=""> 
                                             <div class="product">
-                                                <h4>S03</h4>
+                                                <h4>Cód.27</h4>
                                                 <p>Soga Multiflex</p>
                                                 <p>Cantidad:
                                                     <select class="quantity">
